@@ -11,3 +11,13 @@ Desktop.ini
 *.njsproj
 *.sln
 *.swp
+
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.bmp
+*.tiff
