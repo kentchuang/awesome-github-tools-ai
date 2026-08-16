@@ -207,6 +207,13 @@
 
 ---
 
+### 30. [Agent QA](https://github.com/vostride/agent-qa)
+* **專案團隊**: Vostride
+* **功能簡介**: 以自然語言定義並執行 Web 與行動應用程式的迴歸 QA 工作流，提供 CLI 與 MCP 介面，保留螢幕截圖、DOM、網路及主控台證據，並協助失敗分類。
+* **授權與費用**: 目前版本採 FSL-1.1-ALv2 原始碼可用授權；每個版本發布兩年後轉為 Apache-2.0。套件可免費使用，但所設定的模型供應商可能另行收費。
+
+---
+
 ## 💻 大語言模型與本地部署
 
 ### 1. [ds4 (Dwarf Star 4)](https://github.com/antirez/ds4)
