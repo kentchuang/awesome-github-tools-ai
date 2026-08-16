@@ -1,23 +1,26 @@
 # 🛠️ GitHub 實用工具與AI應用目錄
 
-本目錄彙整了所有 **GitHub 好用工具、AI 應用及精選網站**，並在下方提供對應的詳細功能說明，方便您快速查閱與使用。
+本目錄彙整了所有 **GitHub 好用工具、AI 應用、精選套件及學習資源**，並在下方提供對應的詳細功能說明，方便您快速查閱與使用。
 
 ---
 
 ## 快速導覽目錄
 1. [🤖 AI 輔助與 Agent 相關工具](#-ai-輔助與-agent-相關工具)
 2. [💻 大語言模型與本地部署](#-大語言模型與本地部署)
-3. [📄 文件與資料解析處理工具 (OCR / PDF)](#-文件與資料解析處理工具-ocr--pdf)
-4. [⚡ 實用與效能優化工具](#-實用與效能優化工具)
-5. [📈 金融與交易工具](#-金融與交易工具)
-6. [🔄 工作流自動化](#-工作流自動化)
+3. [📄 文件與資料解析處理工具 (OCR / PDF / 轉檔)](#-文件與資料解析處理工具-ocr--pdf--轉檔)
+4. [🌐 網路爬蟲與資料擷取](#-網路爬蟲與資料擷取)
+5. [⚡ 實用與效能優化工具](#-實用與效能優化工具)
+6. [📈 金融、交易與生活助手](#-金融交易與生活助手)
+7. [🎬 影音與串流工具](#-影音與串流工具)
+8. [🔄 工作流自動化](#-工作流自動化)
+9. [📚 AI 學習資源、電子書與認證指南](#-ai-學習資源電子書與認證指南)
 
 ---
 
 ## 🤖 AI 輔助與 Agent 相關工具
 
 ### 1. Hermes AI Agent 系列
-* **功能簡介**: 可以在本機端「做事」的 AI Agent 助理。它不僅能聊天，還能讀取專案檔案、修改程式碼、執行終端機指令（如跑測試、啟動服務），並透過安裝各式 Skills 來擴充功能（如 Freqtrade 量化研究 Skill）。
+* **功能簡介**: 可以在本機端「做事」的 AI Agent 助理。它不僅能聊天，還能讀取專案檔案、修改程式碼、執行終端機指令（如跑測試、啟動服務），並透過安裝各式 Skills 來擴充功能（如 Freqtrade 量化研究 Skill、前端設計 Skill 等）。
 
 ---
 
@@ -110,6 +113,97 @@
 ### 15. [說人話 speak-human-tw](https://github.com/Raymondhou0917/speak-human-tw)
 * **功能簡介**: 專為繁體中文設計的「去 AI 味」改寫工具（Skill）。可精準偵測 35+ 種常見的 AI 中文寫作痕跡（如誇大意義、說教深度腔、公式化段落等），並將簡體中文、中國用語及半形標點符號轉換為台灣在地化的寫法。特別適用於 Claude Code、Codex、Cursor 等 AI Agent，提供「先標出問題，確認後再改寫」的兩輪安全修改機制，協助創作者與開發者產出更自然、更像真人寫作的文案。
 
+---
+
+### 16. [Multi-AI-Chat-Desktop](https://github.com/Theodore-Huang/Multi-AI-Chat-Desktop)
+* **作者**: Theodore Huang
+* **功能簡介**: 將 ChatGPT、Claude、Gemini、Grok 四大多模態 AI Web Chat 整合在同一個桌面視窗中的開源工具。免填 API Key，直接使用官方 Web 介面與帳號登入，不透過中間伺服器儲存隱私。支援 Windows、macOS、Linux 與 Chrome Extension，內建繁中/英文/日文/德文多語系與三種主題，並附帶 Claude Code 與 Codex 專用 Agent Skills。
+
+---
+
+### 17. [open-code-review](https://github.com/alibaba/open-code-review)
+* **開發團隊**: 阿里巴巴 (Alibaba)
+* **功能簡介**: 專門用於程式碼審查 (Code Review) 的開源專案與模型。在 AACR-BENCH 基準測試中，程式碼審核品質與採納率 (>30%) 顯著優於通用型 AI (如 Claude Code、Codex)，能更精準給出如密碼雜湊 cost factor、安全弱點等具體修正建議，並大幅節省代碼審核的 Token 成本。
+
+---
+
+### 18. [codex-plugin-cc](https://github.com/openai/codex-plugin-cc)
+* **開發團隊**: OpenAI
+* **功能簡介**: OpenAI 官方釋出的 Claude Code 外掛。安裝後可在同一場 Claude Code 工作階段 (session) 中直接呼叫 Codex 執行代碼審查 (Code Review)、對抗式審查，或是當任務卡住時一鍵整包交由 Codex 救援 (Rescue)，實現多模型協同開發。
+
+---
+
+### 19. [Index (Laminar)](https://github.com/laminar-run/index)
+* **開發團隊**: Laminar
+* **功能簡介**: 將網頁瀏覽器封裝為可呼叫 API 的強大 AI 瀏覽器 Agent。在 WebVoyager 評測達到 92% 的超高準確率。支援終端機一行指令 `index run` 執行、本機 Chrome Session 複用、多模態模型 (Claude/Gemini) 推理，能以一句話自動抓取網頁資料並寫入 Google 試算表，內建視覺化操作回放與步驟追蹤。
+
+---
+
+### 20. [Ego-lite](https://github.com/debugtuboshu/ego-lite)
+* **功能簡介**: 人類與 AI Agent 共同協作的專屬瀏覽器。解決傳統自動化 Agent 遇到驗證碼、雙因子認證 (2FA) 或登入狀態失效時卡死的問題；當遇到需人工授權的流程時，人類可無縫接管操作，完成後再交由 Agent 繼續執行。
+
+---
+
+### 21. [harness-starter-kit](https://github.com/agentcrew-academy/harness-starter-kit)
+* **開發團隊**: AgentCrew Academy
+* **功能簡介**: 專為 Claude Code 設計的防護 Hooks 與技能啟動套件。核心包含三大防護 Hook：
+  * **claim-guard hook**: 避免 AI 幻覺與說謊（當 AI 聲稱已驗證或查不到時，自動檢查是否有調用驗證指令與 tool call，未附證據則強制重做）。
+  * **no-emoji hook**: 自動掃描並移除 AI 寫入文件中的 emoji，維持專業乾淨排版。
+  * **lint-check hook**: 統一知識庫與筆記格式規範，防止格式發散。
+
+---
+
+### 22. [Kiro Crew](https://github.com/awslabs/kiro-crew)
+* **開發團隊**: AWS (原 MeshClaw)
+* **功能簡介**: AWS 內部已有超過 3.9 萬人採用的開源多代理協作工具 (Multi-Agent System)。可同時分派多個 AI 代理平行處理 Issue 工單、異常調查與系統搬遷，並持久化保存專案脈絡、排程與修正紀錄，即使工程師離線休眠，Agent 也能持續推進工作。
+
+---
+
+### 23. [HermesOffice (GenOffice)](https://github.com/cript-dev/hermes-office)
+* **功能簡介**: 專為 AI 原生設計的免費開源辦公套件。涵蓋文件處理器 (Docs)、試算表 (Sheets)、簡報 (Slides) 及 PDF 模組，原生整合 Hermes Agent，使用者只需將需求連結丟給 Agent 即可自動產出各類辦公文件與圖表。
+
+---
+
+### 24. [herdr](https://github.com/debugtuboshu/herdr)
+* **功能簡介**: 讓本機 AI Agent 在背景持續運行的排程與執行工具。即使使用者闔上筆記型電腦螢幕，已指派的前端 Agent（如頁面重構）與後端 Agent（如補充 API 測試）仍能在背景無中斷持續運作完成任務。
+
+---
+
+### 25. [Claude 5 大實用 Skills 與外掛精選指南](#-ai-輔助與-agent-相關工具)
+* **功能簡介**: 彙整社群熱推的 5 個高生產力 Claude / AI Agent 外掛：
+  1. **Stop Slop**: 自動移除 AI 腔調、破折號與套話，使文案像真人撰寫。
+  2. **Claude Mem**: 跨對話持久記憶，記錄專案與偏好。
+  3. **UI/UX Pro Max**: 內建 50+ UI 風格與 99 條 UX 設計規範，生成專業級介面。
+  4. **Task Observer**: 靜默觀察工作流並自動優化專屬 Skills。
+  5. **Find Skills**: 以自然語言搜尋與一鍵安裝所需 Skills。
+
+---
+
+### 26. [OpenWorker](https://github.com/andrewyng/openworker)
+* **開發團隊**: 吳恩達團隊 (Andrew Ng / Rohit Prasad)
+* **官方網站**: [openworker.com](https://openworker.com)
+* **功能簡介**: 在本機電腦上運行的開源 Local-first AI 數位員工。打破純聊天機器人僅能輸出文字的限制，能跨工具自動操作本地檔案、整理行事曆、發送 Slack 訊息並產出最終交付檔案。具備 Local-first 隱私架構，支援自備 API Key 或連接本地 Ollama 大模型；內建嚴謹的 Check-in 授權機制，在執行關鍵寫入或發送前會主動請求使用者確認。
+
+---
+
+### 27. [reverse-skill](https://github.com/zhaoxuya520/reverse-skill)
+* **作者**: zhaoxuya520
+* **功能簡介**: 專為 AI Coding Agent（如 Claude Code、Cursor、Kiro、Cline）設計的逆向工程與資安滲透測試 Skill Router Pack。將 AI 轉化為「白帽駭客」，只需提供專案或系統目標，即可自動化執行漏洞掃描與情境攻擊測試，並生成專業的資安審計報告，大幅降低系統資安體檢成本。
+
+---
+
+### 28. [cangjie-skill (倉頡 Skill)](https://github.com/kangarooking/cangjie-skill)
+* **作者**: kangarooking (AI 袋鼠帝)
+* **功能簡介**: 認知植入式思維與高價值內容蒸餾引擎。採用七階段 RIA-TV++ 流程，能將書籍、長影片、播客等非結構化知識進行深度提煉與驗證，轉換為 AI Agent（如 Claude Code、Cursor）可直接載入、組合與執行的模組化 AI Skill Packs，實現將海量閱讀內容轉化為可執行行動工具的知識變現。
+
+---
+
+### 29. [OfficeCLI](https://github.com/iOfficeAI/OfficeCLI)
+* **專案團隊**: iOfficeAI
+* **功能簡介**: 讓 AI Agent（如 Claude Code、Codex、OpenClaw、Hermes 等）能把 Word (.docx)、Excel (.xlsx)、PowerPoint (.pptx) 當成 API 一樣精準操作的開源工具，本機**完全不需要安裝 Microsoft Office**。
+  * **API 化文件操作**: 支援讀取分析、精準增刪查改、批次處理、套用模板 Merge、自動重新計算 Excel 公式與樞紐分析 (Pivot)。
+  * **「Render → Look → Fix」閉環回饋**: 能直接將產出的 Office 文件渲染成 HTML 或 PNG 圖片，讓具備視覺能力的 Agent 親眼「看到」生成結果，自動檢查是否有文字爆框、重疊或排版異常並自行修正，實現全自動化的辦公文件產出工作流。
+  * **多種接入方式**: 原生支援 MCP Server、CLI 終端指令與 SDK 整合。
 
 ---
 
@@ -126,7 +220,7 @@
 
 ---
 
-## 📄 文件與資料解析處理工具 (OCR / PDF)
+## 📄 文件與資料解析處理工具 (OCR / PDF / 轉檔)
 
 ### 1. [MarkItDown](https://github.com/microsoft/markitdown)
 * **開發團隊**: 微軟 (Microsoft)
@@ -157,10 +251,17 @@
 
 ---
 
-## ⚡ 實用與效能優化工具
+### 6. [anydoc](https://github.com/firecrawl/anydoc)
+* **開發團隊**: Firecrawl
+* **功能簡介**: 以 Rust 打造的高效文檔格式轉換程式庫。可將 Word、PowerPoint、Excel、OpenDocument、RTF、EPUB、CSV、PDF 等 14 種辦公格式轉換為統一樣式且乾淨的 GitHub 風格 Markdown，轉換速度極快，能直接餵給 LLM 進行精準解析。
 
-### 1. [Winhance](https://github.com/memstechtips/Winhance)
-* **功能簡介**: 基於 C# 開發的開源 Windows 11 系統增強優化工具。主打「系統精簡 (Debloat)」、「設定持久化」與「安裝 ISO 自訂」。能在不重新安裝系統且兼顧穩定性的前提下，一鍵安全地移除非必要的 Windows 預載軟體，且採用免安裝 (Portable) 設計。
+---
+
+## 🌐 網路爬蟲與資料擷取
+
+### 1. [Crawl4AI](https://github.com/unclecode/crawl4ai)
+* **作者**: unclecode
+* **功能簡介**: 專為大語言模型打造的開源友善網頁爬蟲與擷取工具。無需 API Key，開箱即用，可一鍵將複雜動態網頁提純為乾淨 Markdown 格式；最新版本更進一步優化記憶體調度、支援 GPU 容器部署與高並發穩定抓取。
 
 ---
 
@@ -169,28 +270,52 @@
 
 ---
 
-### 3. [remove-ai-watermarks](https://github.com/wiltodelta/remove-ai-watermarks)
-* **功能簡介**: 去除 AI 隱藏浮水印與中介數據（如 C2PA 協議、Google SynthID 等）的工具，實測在拿掉 C2PA時能完全不損畫質，適合用來清理 AI 產圖的追蹤浮水印。
+## ⚡ 實用與效能優化工具
+
+### 1. [Winhance](https://github.com/memstechtips/Winhance)
+* **功能簡介**: 基於 C# 開發的開源 Windows 11 系統增強優化工具。主打「系統精簡 (Debloat)」、「設定持久化」與「安裝 ISO 自訂」。能在不重新安裝系統且兼顧穩定性的前提下，一鍵安全地移除非必要的 Windows 預載軟體，且採用免安裝 (Portable) 設計。
 
 ---
 
-### 4. [Career-Ops](https://github.com/santifer/career-ops)
+### 2. [NetCheckMonitor](https://github.com/ahui3c/NetCheckMonitor)
+* **作者**: 3C 達人 廖阿輝 (ahui3c)
+* **功能簡介**: 網路連線狀態即時監控小工具。專門用於家中或公司網路不穩定時自動監控連線並記錄斷線日誌，方便後續向電信業者報修。支援即時產出 PDF 統計報表與 CSV 明細，並具備每日自動上傳備份至 Google Drive 的功能。
+
+---
+
+### 3. [DesktopOK](https://www.softwareok.com/?seite=Freeware/DesktopOK)
+* **功能簡介**: 解決 Windows 桌面圖示排列紊亂問題的經典實用工具。能精確儲存與一鍵還原桌面圖示的位置與佈局，防止因變更螢幕解析度、更換多螢幕或重開機時圖示位置跑位。
+
+---
+
+### 4. [openings-mcp](https://github.com/amikai/openings-mcp)
+* **作者**: amikaiii
+* **功能簡介**: 支援多國平台與企業的開源職缺搜尋 MCP 工具。讓 AI Agent 能直接檢索 LinkedIn、Indeed、台灣（104、Cake.me）、日本、丹麥（Jobindex）以及 TSMC、Apple、Google、Amazon、Meta、NVIDIA 等 10,000+ 家科技巨頭與企業的最新職缺。
+
+---
+
+### 5. [Career-Ops](https://github.com/santifer/career-ops)
 * **功能簡介**: 用 AI 反向篩選職缺的求職神器。能在本地掃描招聘平台並根據用戶自定義的 10 個維度對職缺進行 A-F 精準打分，篩選出高品質工作，並自動生成針對該 Job Description (JD) 優化的專屬 PDF 履歷以通過企業的 ATS 系統篩選。
 
 ---
 
-### 5. [jt-gelflow](https://github.com/jasoncheng7115/jt-gelflow)
+### 6. [remove-ai-watermarks](https://github.com/wiltodelta/remove-ai-watermarks)
+* **功能簡介**: 去除 AI 隱藏浮水印與中介數據（如 C2PA 協議、Google SynthID 等）的工具，實測在拿掉 C2PA 時能完全不損畫質，適合用來清理 AI 產圖的追蹤浮水印。
+
+---
+
+### 7. [jt-gelflow](https://github.com/jasoncheng7115/jt-gelflow)
 * **作者**: Jason Cheng
 * **功能簡介**: 網路流量即時監控視覺化工具。接收 Graylog 資料流，在前端以動態流量圖、2D地圖、3D地球以及最新版本加入的「桑基圖 (Sankey)」呈現，讓 IT 管理者能對公司的網路流量去向一目了然。
 
 ---
 
-### 6. [IPTV](https://github.com/iptv-org/iptv) (7 大爆紅 Skill 之一)
+### 8. [IPTV](https://github.com/iptv-org/iptv) (7 大爆紅 Skill 之一)
 * **功能簡介**: 全球免費網路電視頻道的超級懶人包。由社群驅動，收集世界各地公開免費播放的直播串流連結，並整理為標準的 M3U 播放清單，方便使用者直接匯入各種播放器中免費收看全球電視。
 
 ---
 
-## 📈 金融與交易工具
+## 📈 金融、交易與生活助手
 
 ### 1. [Fincept Terminal](https://github.com/Fincept-Corporation/FinceptTerminal)
 * **功能簡介**: 開源版的金融研究工作站（Bloomberg Terminal 替代方案）。整合了股票、總體經濟、新聞、加密貨幣等金融資料，並內建 AI Agent 來協助研究與摘要，專案使用 C++20、Qt6 與 Python 開發，在 GitHub 上已獲 23k+ 星標。
@@ -203,7 +328,48 @@
 
 ---
 
+### 3. [財伴 oSave](https://apps.apple.com/app/osave)
+* **開發團隊**: finctory
+* **功能簡介**: 結合 AI 輔助的存錢與理財記帳助手 App。支援 iOS 與 Android 雙平台，主打精準記帳、資產與財務分析，並提供個性化的儲蓄計畫與投資本金累積建議。
+
+---
+
+## 🎬 影音與串流工具
+
+### 1. [Invidious](https://github.com/iv-org/invidious)
+* **功能簡介**: 100% 開源且保護隱私的 YouTube 替代前端。完全無廣告、支援行動裝置背景播放音訊、免登入 Google 帳號即可訂閱與觀看、無廣告追蹤像素。載入速度極快，可一鍵匯入 YouTube 訂閱頻道，並能搭配 Privacy Redirect 擴充套件自動重新導向。
+
+---
+
+### 2. [StreameX](https://github.com/streamex-app/streamex)
+* **功能簡介**: 開源的跨平台影視影音串流瀏覽與播放應用。具備現代化 UI 介面，支援搜尋電影、電視影集 (TV Shows)、熱門榜單瀏覽與流暢串流播放體驗。
+
+---
+
 ## 🔄 工作流自動化
 
 ### 1. [n8n](https://github.com/n8n-io/n8n)
 * **功能簡介**: 強大的節點式工作流自動化工具。學習歷程涵蓋 Trigger 觸發器、Gmail / Google Sheets 串接、RAG AI 機器人、MCP 協議結合以及將 n8n 作為輕量化網站後端等應用。在 Agent 時代，配合 n8n 跑固定流程是極具性價比（省 Token 與高穩定度）的自動化方案。
+
+---
+
+## 📚 AI 學習資源、電子書與認證指南
+
+### 1. [深入理解 AI Agent：設計原理與工程實踐](https://bojieli.github.io/agent-book/)
+* **作者**: 李博傑 (bojieli) 等
+* **功能簡介**: 免費開源的 AI Agent 完整電子書。以「Agent = LLM + 上下文 + 工具」為核心架構，全書共 10 章並附帶 92 個配套實驗（其中 70+ 個可獨立執行）。支援正體中文、簡體中文、英文等 7 種語言，並提供 PDF/EPUB 離線下載與線上閱讀。
+
+---
+
+### 2. 科技巨頭免費 AI 認證路徑指南
+* **彙整內容**: 履歷上具備鑑別度的四大科技巨頭免費 AI 認證方案：
+  * **Microsoft Applied Skills**: 全程免費，1-2 小時實作考，開書不監考且證書不失效。
+  * **Google Cloud Skills Boost / Innovators**: 免費參與 Google Cloud Innovators 每月贈送 35 點 credits，可用於完成計時實作 Lab 技能徽章。
+  * **AWS Skill Builder**: 提供 600+ 門免費課程與數位徽章。
+  * **IBM SkillsBuild**: AI Fundamentals 等基礎課程與 Credly 官方數位認證徽章全免費。
+
+---
+
+### 3. AI 策展實證線上課程案例
+* **案例分享**: 林協霆
+* **功能簡介**: 示範如何運用 AI 結合 YouTube 高讚影片與醫學實證資料庫（PubMed、OpenEvidence），以常見線上課程的 UX/UI 框架與 iframe 嵌入，快速低成本策展出一套高品質、附帶收錄理由與實證依據的免費健身線上課程。
