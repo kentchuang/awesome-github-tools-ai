@@ -7,7 +7,7 @@
 ## 快速導覽目錄
 1. [🤖 AI 輔助與 Agent 相關工具](#-ai-輔助與-agent-相關工具)
 2. [💻 大語言模型與本地部署](#-大語言模型與本地部署)
-3. [📄 文件與資料解析處理工具 (OCR / PDF / 轉檔)](#-文件與資料解析處理工具-ocr--pdf--轉檔)
+3. [📄 文件與資料解析處理工具 (OCR / PDF / 轉檔 / 隱私脫敏)](#-文件與資料解析處理工具-ocr--pdf--轉檔--隱私脫敏)
 4. [🌐 網路爬蟲與資料擷取](#-網路爬蟲與資料擷取)
 5. [⚡ 實用與效能優化工具](#-實用與效能優化工具)
 6. [📈 金融、交易與生活助手](#-金融交易與生活助手)
@@ -93,6 +93,7 @@
   * **Grill Me (需求訪談技能 - `/grill-me`)**: 扮演「開工前的檢察官」角色。在專案初期反過來對使用者進行深度拷問與訪談（釐清開發動機、技術框架、限制等模糊細節），避免 AI 認真地「亂做」或猜測需求，拉高專案完整度與減少重構時間。
   * **Grill with Docs (文件對齊技能 - `/grill-with-docs`)**: 適用於既有開發專案。讓 AI 針對既有文件與使用者對齊所有的「文件定義、審核標準、錯誤管理」，並在專案中留下 `CONTEXT.md` 和設計決策記錄（ADRs）。
   * **to-spec & to-tickets (PRD 與任務拆解技能 - `/to-spec` / `/to-tickets`)**: 將前述訪談拷問出來的內容，直接轉換為產品需求文件（PRD / Spec）與可執行的任務票券（Tickets），並自動規劃 blocking dependencies。
+  * **to-questionnaire (需求問卷產生技能 - `/to-questionnaire`)**: 當要做決定且關鍵資訊只有同事或利害關係人知道時，自動產生精準的 Markdown 問卷。只問核心事項、對齊資訊落差，並預留填答空位，最後自動附帶開放式反思問題。
   * **TDD (測試驅動開發技能 - `/tdd`)**: 在開發時執行，讓 AI 根據 spec 進行每個功能的測試（紅燈與綠燈案例測試），確保專案執行中最大程度降低 Bug 發生機率。
   * **Code Review (代碼雙軸審查技能 - `/code-review`)**: 針對標準規範（Standards）與功能規格（Spec）對程式碼進行雙軸審核，確保安全性與品質。
 
@@ -166,6 +167,10 @@
 
 ### 24. [herdr](https://github.com/debugtuboshu/herdr)
 * **功能簡介**: 讓本機 AI Agent 在背景持續運行的排程與執行工具。即使使用者闔上筆記型電腦螢幕，已指派的前端 Agent（如頁面重構）與後端 Agent（如補充 API 測試）仍能在背景無中斷持續運作完成任務。
+* **多 Agent 自動化工作流協同架構**:
+  * **A (流程控制角色 - Codex)**: 負責拆解總體目標、呼叫 `herdr agent wait` 進行非同步等待與多 Agent 調度。
+  * **B (執行者 - OpenCode)**: 專注於具體功能開發、專案建置與代碼編寫。
+  * **C (驗證者 - Claude)**: 執行驗證缺口檢視與測試，通過後核准並標記下一階段任務，實現零死角的多 Agent 自律閉環。
 
 ---
 
@@ -207,6 +212,98 @@
 
 ---
 
+### 30. [AI Office Dollhouse](https://github.com/leavemagic-cyber/ai-office-dollhouse)
+* **作者**: leavemagic (leavemagic-cyber)
+* **功能簡介**: 專為 Windows 打造的開源 2.5D 像素辦公室視覺化小工具。能將本機端運行的 Codex、Claude Code、Gemini CLI、Grok 等 AI Coding Agents 的即時工作狀態，轉換為一間活靈活現、會動的 2.5D 迷你小辦公室。具備 Local-first 隱私設計，完全不讀取使用者的 Prompts、模型回覆或工具操作內容，支援 MIT 開源免費使用。
+
+---
+
+### 31. [pxpipe](https://github.com/teamchong/pxpipe)
+* **開發團隊**: teamchong
+* **功能簡介**: 透過「代碼轉圖片」大幅節省 Token 成本的開源代理工具。
+  * **核心原理**: 現代多模態模型（如 Claude 3.7 / Opus 5 / Gemini Flash 3.7）在讀取圖片時消耗的 Token 遠小於讀取海量文字代碼。pxpipe 在請求送出前自動將程式碼壓縮渲染為一張高密度圖片再丟給 AI，可省下約 46%~59% 的 Token 費用。
+  * **視覺化儀表板**: 內建網頁主控台，可即時查看每筆請求節省的 Token 數量與累積節省的實際美金費用。
+
+---
+
+### 32. [diagram-design](https://github.com/cathrynlavery/diagram-design)
+* **作者**: Cathryn Lavery (cathrynlavery)
+* **功能簡介**: 專為 Claude Code 與 AI Agent 設計的架構圖與資訊圖表生成技能。
+  * **純 HTML + SVG 輸出**: 不需 Webpack 打包、零 JavaScript、無任何外部依賴，生成即可直接在瀏覽器完美渲染。
+  * **涵蓋 28 種圖表**: 架構圖、流程圖、時序圖、甘特圖、四象限圖、漏斗圖、雷達圖等，每種皆支援淺色極簡、深色極簡與完整編輯版三種樣式。
+  * **嚴格設計規範**: 內建 4 像素網格對齊、最多 10px 圓角、極簡強調色等設計原則，徹底消除 AI 繪圖的粗糙感。
+
+---
+
+### 33. [Agenvoy](https://github.com/agenvoy/agenvoy)
+* **作者**: 邱敬幃
+* **功能簡介**: 台灣自研的開源 AI Agent Harness 框架。
+  * **純 Go 語言單一二進位**: 單一 Go binary 直接自架於本機電腦，效能卓越且開箱即用 28 個工具（檔案處理、Shell 指令、網頁查詢、排程工作等）。
+  * **工具動態自擴充**: 缺失工具時能即時自動建立，並透過 MCP 沙箱工具庫共享給 Claude Code、Codex 等其他 Agent。
+  * **快照還原與智能路由**: 支援檔案一鍵快照還原，並根據任務複雜度與模型健康狀態自動切換分配後端 LLM。
+
+---
+
+### 34. [Nario AI](https://nario.ai/)
+* **開發團隊**: Nario AI
+* **功能簡介**: 專為企業內部流程設計的 AI 數位員工 (AI Agent) 服務系統。
+  * **無縫串接通訊軟體**: 直接讀取團隊現有的 LINE、Email、Slack 訊息，自動辨識訂單與客服需求。
+  * **直連傳統 ERP 自動開單**: 透過專屬資料庫安全通道直連正航、鼎新等使用超過 20 年的傳統老舊 ERP 系統完成自動開單或建檔，完全免除耗時昂貴的 API 串接或資料搬遷。
+
+---
+
+### 35. [AI 資安審查 Agent Skills 精選 (Trail of Bits / Claude Code Security Review)](#-ai-輔助與-agent-相關工具)
+* **功能簡介**: 專為 Vibe Coding 與 AI 輔助開發設計的 4 大開源資安稽核套件：
+  1. **Trail of Bits Skills ([trailofbits/skills](https://github.com/trailofbits/skills))**: 知名資安團隊 Trail of Bits 官方推出的 Claude Code 技能庫，涵蓋漏洞偵測、靜態程式碼分析 (Static Analysis) 與資安稽核工作流。
+  2. **Anthropic Claude Code Security Review ([anthropics/claude-code-security-review](https://github.com/anthropics/claude-code-security-review))**: Anthropic 官方推出的 GitHub Action，在 GitHub PR 發起時自動調用 Claude 深度分析程式碼變更中的安全弱點並留下審查意見。
+  3. **Cloudflare Security Audit Skill**: 涵蓋 Recon 偵察 → 漏洞掃描 → 驗證 → 漏洞分級 → 報告產出的完整資安稽核流程。
+  4. **GitHub Security Review**: 專注於 PR Code Review，檢查 Prompt/SQL Injection、Secrets 密鑰外洩、Auth 鑑權、依賴漏洞與加密 (Crypto) 等安全風險。
+
+---
+
+### 36. [Claude Code 效率外接三件套 (Graphify / Firecrawl / Gemini Notebook)](#-ai-輔助與-agent-相關工具)
+* **功能簡介**: 解決 Claude Code 開發時重複閱讀專案與網頁抓取浪費 Token 的三大利器：
+  1. **Graphify**: 將整個專案代碼庫畫成知識地圖/關係圖譜，讓 Claude 查閱地圖導航，免去每次重讀全專案檔案的 Token 消耗。
+  2. **Firecrawl**: 將網頁爬蟲資料清洗為乾淨純粹的 Markdown 文字，徹底去除 HTML 標籤與廣告干擾。
+  3. **Gemini Notebook (NotebookLM)**: 將大量參考資料餵給 Gemini Notebook 整理成結構化心智圖、報告或摘要影片，供 Claude 直接快速取用。
+
+---
+
+### 37. [Vibe Coding 必備 5 大 Plugins / Skills](#-ai-輔助與-agent-相關工具)
+* **功能簡介**: 針對 Claude Code 與 Codex 進行 Vibe Coding 的 5 大核心擴充套件，一次補齊全端開發鏈路：
+  1. **Playwright**: 瀏覽器自動化與端到端 (E2E) 測試。
+  2. **Supabase**: 資料庫管理、SQL 遷移與後端服務串接。
+  3. **Strix**: 程式碼安全掃描與弱點防禦。
+  4. **Skill UI**: 前端 UI 元件庫與設計系統自動化。
+  5. **Context7**: 即時查詢各大套件庫的最新官方 Documentation，避免 AI 使用過期 API。
+
+---
+
+### 38. [discernment-nudge](https://github.com/anthropics/anthropic-agent-skills)
+* **開發團隊**: Anthropic 官方
+* **安裝指令**: `/plugin marketplace add anthropics/skills` 後執行 `/plugin install discernment-nudge@anthropic-agent-skills`
+* **功能簡介**: Anthropic 官方 Agent Skills 庫上架的「反思與質疑引導」Skill。當 AI 回答完畢後，會主動在文末附帶 2~3 條針對潛在漏洞、邏輯脆弱處或假設邊界的反問句，方便開發者直接挑選回貼，要求 AI 自我交叉驗證與挑錯，有效防止 AI 幻覺或過度自信。
+
+---
+
+### 39. [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp)
+* **開發團隊**: Google Chrome 團隊
+* **功能簡介**: Google Chrome 官方出品的 MCP 伺服器，將 Chrome 開發者工具的原生強大能力直接開放給 AI Agent（如 Claude Code 等）：
+  * **效能追蹤**: 分析渲染效能瓶頸與卡頓原因。
+  * **Network 攔截**: 即時查看與分析 API 請求封包、狀態碼與 Payload。
+  * **Console 日誌**: 直接讀取前端報錯日誌與警告。
+  * **DOM 操作**: 基於真實 DOM 結構進行分析與修改，非截圖猜測。
+  * **Puppeteer 自動化**: 串接 Puppeteer 實現完整的自動化瀏覽與互動測試流程。
+
+---
+
+### 40. [Agent QA](https://github.com/vostride/agent-qa)
+* **專案團隊**: Vostride
+* **功能簡介**: 以自然語言定義並執行 Web 與行動應用程式的迴歸 QA 工作流，提供 CLI 與 MCP 介面，保留螢幕截圖、DOM、網路及主控台證據，並協助失敗分類。
+* **授權與費用**: 目前版本採 FSL-1.1-ALv2 原始碼可用授權；每個版本發布兩年後轉為 Apache-2.0。套件可免費使用，但所設定的模型供應商可能另行收費。
+
+---
+
 ## 💻 大語言模型與本地部署
 
 ### 1. [ds4 (Dwarf Star 4)](https://github.com/antirez/ds4)
@@ -220,7 +317,7 @@
 
 ---
 
-## 📄 文件與資料解析處理工具 (OCR / PDF / 轉檔)
+## 📄 文件與資料解析處理工具 (OCR / PDF / 轉檔 / 隱私脫敏)
 
 ### 1. [MarkItDown](https://github.com/microsoft/markitdown)
 * **開發團隊**: 微軟 (Microsoft)
@@ -253,27 +350,38 @@
 
 ### 6. [anydoc](https://github.com/firecrawl/anydoc)
 * **開發團隊**: Firecrawl
-* **功能簡介**: 以 Rust 打造的高效文檔格式轉換程式庫。可將 Word、PowerPoint、Excel、OpenDocument、RTF、EPUB、CSV、PDF 等 14 種辦公格式轉換為統一樣式且乾淨的 GitHub 風格 Markdown，轉換速度極快，能直接餵給 LLM 進行精準解析。
+* **功能簡介**: 開源的萬能文件轉檔 CLI 工具。能將 PDF、Word、Excel、PowerPoint、EPub、ZIP、HTML 及專案代碼等各式檔案，快速轉成乾淨且結構化的 Markdown 格式，支援本機離線運作與遠端 API 模式。
+
+---
+
+### 7. [EduShield](https://github.com/oas114/EduShield)
+* **作者**: oas114
+* **功能簡介**: 教育與公務隱私保護系統——零信任架構的去識別化與還原工具。採用純靜態單一 HTML 設計，所有資料運算皆在瀏覽器本機端完成，確保公文、學生或機密資料完全不落地。在將資料交給外部 AI 分析前，先自動去識別化姓名、電話、身分證等敏感個資，處理完畢後可於本地一鍵無損還原。
+
+---
+
+### 8. [Microsoft Presidio](https://github.com/microsoft/presidio)
+* **開發團隊**: 微軟 (Microsoft)
+* **功能簡介**: 微軟開源的敏感個人資料 (PII) 自動識別與去識別化防禦引擎。結合 NLP/NER 實體辨識模型與正規表示式雙引擎，精準辨識上下文中的真實姓名、地址、電話、身分證與信用卡等個資；支援字元遮罩 (Masking)、雜湊加密 (Hashing)、假資料替換 (Redact) 及部分保留等多種脫敏策略。提供 Python SDK、REST API 與 Docker 容器，是構建 LLM / RAG 資料前置清洗防線的標準利器。
 
 ---
 
 ## 🌐 網路爬蟲與資料擷取
 
 ### 1. [Crawl4AI](https://github.com/unclecode/crawl4ai)
-* **作者**: unclecode
-* **功能簡介**: 專為大語言模型打造的開源友善網頁爬蟲與擷取工具。無需 API Key，開箱即用，可一鍵將複雜動態網頁提純為乾淨 Markdown 格式；最新版本更進一步優化記憶體調度、支援 GPU 容器部署與高並發穩定抓取。
+* **功能簡介**: 專門為大型語言模型 (LLM) 與 AI Agent 量身打造的開源非同步網頁爬蟲。速度極快，能輸出乾淨且具備語意結構的 Markdown 內容，支援執行 JavaScript、處理動態載入頁面、模擬使用者操作以及抽取結構化 JSON 資料。
 
 ---
 
 ### 2. [Camofox](https://github.com/Camoufox/camoufox)
-* **功能簡介**: 專為 AI 爬蟲與自動化設計的匿蹤瀏覽器。從 C++ 底層修改 Firefox，完美偽裝硬體特徵與渲染行為，能有效突破 Cloudflare 等防爬蟲封鎖機制。內建閒置休眠，僅占約 40MB 記憶體。可將網頁轉為縮減 90% 體積的無障礙快照，並自動為元素加上簡易精準標籤以利 AI 定位與點擊。
+* **功能簡介**: 基於 Firefox 核心改造的開源匿蹤防爬瀏覽器。專門針對反爬蟲偵測機制（如 Cloudflare Turnstile、Akamai 等）進行硬體指紋偽裝與行為模擬，可大幅降低自動化爬蟲被阻擋的機率。
 
 ---
 
 ## ⚡ 實用與效能優化工具
 
 ### 1. [Winhance](https://github.com/memstechtips/Winhance)
-* **功能簡介**: 基於 C# 開發的開源 Windows 11 系統增強優化工具。主打「系統精簡 (Debloat)」、「設定持久化」與「安裝 ISO 自訂」。能在不重新安裝系統且兼顧穩定性的前提下，一鍵安全地移除非必要的 Windows 預載軟體，且採用免安裝 (Portable) 設計。
+* **功能簡介**: Windows 11 系統最佳化與瘦身工具。提供直觀圖形化介面，可一鍵關閉微軟遙測追蹤、禁用廣告、移除內建臃腫軟體 (Bloatware)、關閉 Copilot 與 Recall 等背景 AI 服務，並提升系統隱私與遊戲運行效能。
 
 ---
 
@@ -315,6 +423,17 @@
 
 ---
 
+### 9. [AI Quota Deck](https://github.com/JoshuaWang2211/ai-quota-deck)
+* **作者**: Joshua Wang (JoshuaWang2211)
+* **功能簡介**: Windows 系統匣與工作列的 AI 用量額度監控儀表板。可同時即時追蹤 Claude Code、Codex、Gemini 與 Grok 的 Session 與週期使用配額，支援多種顯示模式並能直接鎖定於 Windows 工作列左側空白處。同時提供專屬 Chrome 瀏覽器擴充功能。
+
+---
+
+### 10. [Public APIs](https://github.com/public-apis/public-apis)
+* **功能簡介**: GitHub 上超過 46 萬星標的免費公開 API 超級懶人包。收錄超過 1,000+ 個真正免費的 Public API（涵蓋天氣、金融股票、加密貨幣、AI、地圖圖資、各類公用資訊等），詳細標註鑑權方式 (Auth)、HTTPS 支援與 CORS 狀態，開箱複製貼上即可在各類專案中調用。
+
+---
+
 ## 📈 金融、交易與生活助手
 
 ### 1. [Fincept Terminal](https://github.com/Fincept-Corporation/FinceptTerminal)
@@ -334,6 +453,12 @@
 
 ---
 
+### 4. [HealthWorkbench](https://github.com/notoriouslab/health-workbench)
+* **開發團隊**: NotoriousLab
+* **功能簡介**: 免費開源的個人與家庭健康資料工作台桌面 App (支援 macOS 與 Windows)。解決健保「健康存摺」僅保留近三年紀錄以及 Apple 健康匯出檔龐大難讀的痛點；支援直接拖入健保存摺下載檔、Apple 健康匯出檔與睡眠呼吸器 SD 卡資料，自動解析格式、去除重複並建立跨越三年的完整終身健康紀錄。提供就醫時間軸、用藥清單（附成分與仿單連結）、檢驗趨勢圖與呼吸器 AHI 整合圖表。全程本機運作不上雲、無帳號、無追蹤，並支援一鍵匯出單檔 HTML 或 EPUB 方便回診時與醫師討論。
+
+---
+
 ## 🎬 影音與串流工具
 
 ### 1. [Invidious](https://github.com/iv-org/invidious)
@@ -343,6 +468,24 @@
 
 ### 2. [StreameX](https://github.com/streamex-app/streamex)
 * **功能簡介**: 開源的跨平台影視影音串流瀏覽與播放應用。具備現代化 UI 介面，支援搜尋電影、電視影集 (TV Shows)、熱門榜單瀏覽與流暢串流播放體驗。
+
+---
+
+### 3. [分鏡快拆 (Story Cut) 與 GridyClip](https://zhiyent.com/story)
+* **作者**: 異鄉人經紀小葉 (ayeh821) / 嚴曇 (GridyClip)
+* **功能簡介**: 專為影像導演、剪接師與行銷過稿設計的影片分鏡自動拆解工具。只需將影片拖入網頁，即可自動偵測畫面切點完成分鏡拆解，支援時間軸微調、每格鏡頭備註分析，並可一鍵輸出分鏡大圖、Excel、PDF 或打包下載所有高清截圖。影片全程於本機瀏覽器內運算不需上傳伺服器，確保未公開影音素材的商業機密。
+
+---
+
+### 4. [video-autopilot-kit](https://github.com/Hao0321/video-autopilot-kit)
+* **作者**: Hao0321 (HAO0321 Studio)
+* **功能簡介**: 台灣創作者開源的 YouTube / 短影音自動化剪輯框架。結合剪映 (CapCut) JSON 軌道數據處理與 ffmpeg 工具鏈，讓創作者只需填入結構化資料（文案、素材路徑），即可全自動化批量產出短影音，作者持續每週維護更新。
+
+---
+
+### 5. [JojoNowhere AI Edit Kit](https://github.com/jojonowhere/jojonowhere-ai-edit-kit)
+* **作者**: Jojo (揪揪漫遊 / JojoNowhere)
+* **功能簡介**: 用 Claude 打造 AI 影片自動剪輯工作流程的實況開源資源包。提供一鍵 `bash setup.sh` 安裝環境，整合了 git、uv、node、ffmpeg、video-use 剪輯引擎、思源黑體 TW 繁體字幕字體、watch@claude-video 外掛以及 ElevenLabs API 逐字稿語音轉寫，是探索 AI 輔助短影音後製的絕佳起點。
 
 ---
 
@@ -373,3 +516,11 @@
 ### 3. AI 策展實證線上課程案例
 * **案例分享**: 林協霆
 * **功能簡介**: 示範如何運用 AI 結合 YouTube 高讚影片與醫學實證資料庫（PubMed、OpenEvidence），以常見線上課程的 UX/UI 框架與 iframe 嵌入，快速低成本策展出一套高品質、附帶收錄理由與實證依據的免費健身線上課程。
+
+---
+
+### 4. [awesome-agentic-ai-zh](https://github.com/WenyuChiou/awesome-agentic-ai-zh)
+* **作者**: Wenyu Chiou
+* **功能簡介**: 台灣開發者整理的開源 Agentic AI 結構化學習地圖。不同於一般無序的資源列表，本專案將 240+ 個 AI 專案、77+ 個 MCP / Skills 與 23 個實作案例，結構化整理為 8 大學習階段，並明確拆分出兩條清晰路徑：
+  * **路線 A：CLI Power User (8-10 週)**：著重於將現成 Agent CLI（Claude Code、Codex、Gemini CLI 等）與 Skills 運用到極致。
+  * **路線 B：Agent Builder (16-22 週)**：從 LLM 原理、Prompt、Tool Use 一路深入到 RAG、Memory、MCP、Multi-Agent 編排與 Computer Use，引導開發者親手打造專屬 Agent 系統。
