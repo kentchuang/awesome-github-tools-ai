@@ -304,6 +304,13 @@
 
 ---
 
+### 41. [YYLO](https://github.com/yylo-dev/yylo)
+* **專案團隊**: yylo-dev
+* **功能簡介**: 命令列編碼代理（coding agent）協調器，支援可重複執行的工作流程與附帶回執（receipt）的儲存庫變更：提供型別化的任務、驗證、合併與釋出就緒邊界；`task start` 會凍結受保護的目標 SHA，並為每個任務建立專屬分支與 Git worktree，內建 Pi 與 Codex 子代理。
+* **授權與費用**: MIT 開源、免費；npm 套件 `@yylo/cli`（`npm install --global '@yylo/cli@latest'`）。
+
+---
+
 ## 💻 大語言模型與本地部署
 
 ### 1. [ds4 (Dwarf Star 4)](https://github.com/antirez/ds4)

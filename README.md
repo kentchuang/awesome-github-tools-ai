@@ -19,7 +19,7 @@
 
 1. **🤖 AI 輔助與 Agent 相關工具**
    * **本機 Agent & 辦公視覺化**：Hermes AI Agent、OpenWorker (吳恩達團隊)、AI Office Dollhouse (2.5D 像素辦公室)、OfficeCLI (免裝 Office API 操作)、HermesOffice。
-   * **多 Agent 編排與背景執行**：AWS Kiro Crew (3.9 萬人使用)、herdr (多 Agent 協同閉環)、Agenvoy (台灣自研純 Go 單一 Binary Harness)、Nario AI (直連傳統 ERP)。
+   * **多 Agent 編排與背景執行**：AWS Kiro Crew (3.9 萬人使用)、herdr (多 Agent 協同閉環)、Agenvoy (台灣自研純 Go 單一 Binary Harness)、Nario AI (直連傳統 ERP)、YYLO (命令列編排編碼 Agent 的開源協調器)。
    * **Token 極致節省**：Caveman (山頂洞人輸出壓縮)、Headroom (輸入上下文可逆壓縮)、pxpipe (程式碼轉圖片省 50% Token)。
    * **開發工程與規格化**：github/spec-kit (規格驅動 SDD)、mattpocock/skills (需求訪談/問卷/TDD)、Claude Code 知識三件套 (Graphify / Firecrawl / Gemini Notebook)、Vibe Coding 必備 5 大外掛。
    * **程式碼與安全審查**：Trail of Bits 官方安全 Skills、Anthropic Claude Code Security Review、阿里 open-code-review、OpenAI codex-plugin-cc、reverse-skill 白帽滲透測試、SkillSpector (NVIDIA 技能安全掃描器)、Agent QA (自然語言 Web/Mobile 迴歸測試與 MCP)。
