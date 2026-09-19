@@ -35,7 +35,7 @@
 
 ---
 
-### 4. [linebot-multimodal-rag](https://github.com/evanlin/linebot-multimodal-rag)
+### 4. [linebot-multimodal-rag](https://github.com/kkdai/linebot-multimodal-rag)
 * **作者**: Evan Lin
 * **功能簡介**: 基於 Google Gemini API File Search 打造的 LINE Bot 多模態 RAG 知識庫。支援將文字、圖片、影片、音訊共享於同一個向量空間以實現「以圖找文 / 以文找圖」，並具備多租戶 Metadata 過濾與頁級引用（直接標註出自 PDF 第幾頁），僅需不到 600 行 Python 即可實作。
 
@@ -102,7 +102,7 @@
 ### 14. [github/spec-kit](https://github.com/github/spec-kit) (規格驅動開發工具包)
 * **功能簡介**: 由 GitHub 官方推出的 AI 規格驅動開發 (Spec-Driven Development, SDD) 工具包。旨在終結盲目的「直覺式 Prompt 開發 (Vibe Coding)」，將開發流程系統化拆解為定義專案憲法（Constitution）、撰寫規格書（Specify）、產生實作計畫（Plan）及拆解任務（Tasks）等階段，讓 AI 代理嚴格對齊專案目標。
 * **專案網址**: [github/spec-kit](https://github.com/github/spec-kit)
-* **安裝指令**: 使用 `uv` 安裝：`uv tool install specify-cli --from git+https://github.com/github/spec-kit.git`
+* **安裝指令**: 使用 `uv` 安裝：`uv tool install specify-cli --from git+https://github.com/github/spec-kit`
 * **與 mattpocock/skills 的比較與選擇建議**:
   * **核心哲學**: `spec-kit` 強調系統化、端到端的 Rigorous（嚴密性），以 spec 作為 living artifact 並整合至專案特定結構（如 `.specify/` 目錄）；而 `mattpocock/skills` 則提倡輕量、靈活的「模組化 Skills/MCP」來保護開發者的控制權。
   * **適用場景**:
@@ -116,7 +116,7 @@
 
 ---
 
-### 16. [Multi-AI-Chat-Desktop](https://github.com/Theodore-Huang/Multi-AI-Chat-Desktop)
+### 16. [Multi-AI-Chat-Desktop](https://github.com/teddashh/multi-ai-chat-desktop)
 * **作者**: Theodore Huang
 * **功能簡介**: 將 ChatGPT、Claude、Gemini、Grok 四大多模態 AI Web Chat 整合在同一個桌面視窗中的開源工具。免填 API Key，直接使用官方 Web 介面與帳號登入，不透過中間伺服器儲存隱私。支援 Windows、macOS、Linux 與 Chrome Extension，內建繁中/英文/日文/德文多語系與三種主題，並附帶 Claude Code 與 Codex 專用 Agent Skills。
 
@@ -134,13 +134,13 @@
 
 ---
 
-### 19. [Index (Laminar)](https://github.com/laminar-run/index)
+### 19. [Index (Laminar)](https://github.com/lmnr-ai/index)
 * **開發團隊**: Laminar
 * **功能簡介**: 將網頁瀏覽器封裝為可呼叫 API 的強大 AI 瀏覽器 Agent。在 WebVoyager 評測達到 92% 的超高準確率。支援終端機一行指令 `index run` 執行、本機 Chrome Session 複用、多模態模型 (Claude/Gemini) 推理，能以一句話自動抓取網頁資料並寫入 Google 試算表，內建視覺化操作回放與步驟追蹤。
 
 ---
 
-### 20. [Ego-lite](https://github.com/debugtuboshu/ego-lite)
+### 20. [Ego-lite](https://github.com/citrolabs/ego-lite)
 * **功能簡介**: 人類與 AI Agent 共同協作的專屬瀏覽器。解決傳統自動化 Agent 遇到驗證碼、雙因子認證 (2FA) 或登入狀態失效時卡死的問題；當遇到需人工授權的流程時，人類可無縫接管操作，完成後再交由 Agent 繼續執行。
 
 ---
@@ -154,18 +154,18 @@
 
 ---
 
-### 22. [Kiro Crew](https://github.com/awslabs/kiro-crew)
+### 22. [Kiro Crew](https://github.com/kirodotdev/KiroCrew)
 * **開發團隊**: AWS (原 MeshClaw)
 * **功能簡介**: AWS 內部已有超過 3.9 萬人採用的開源多代理協作工具 (Multi-Agent System)。可同時分派多個 AI 代理平行處理 Issue 工單、異常調查與系統搬遷，並持久化保存專案脈絡、排程與修正紀錄，即使工程師離線休眠，Agent 也能持續推進工作。
 
 ---
 
-### 23. [HermesOffice (GenOffice)](https://github.com/cript-dev/hermes-office)
+### 23. [HermesOffice (GenOffice)](https://github.com/genspark-ai/genoffice)
 * **功能簡介**: 專為 AI 原生設計的免費開源辦公套件。涵蓋文件處理器 (Docs)、試算表 (Sheets)、簡報 (Slides) 及 PDF 模組，原生整合 Hermes Agent，使用者只需將需求連結丟給 Agent 即可自動產出各類辦公文件與圖表。
 
 ---
 
-### 24. [herdr](https://github.com/debugtuboshu/herdr)
+### 24. [herdr](https://github.com/herdrdev/herdr)
 * **功能簡介**: 讓本機 AI Agent 在背景持續運行的排程與執行工具。即使使用者闔上筆記型電腦螢幕，已指派的前端 Agent（如頁面重構）與後端 Agent（如補充 API 測試）仍能在背景無中斷持續運作完成任務。
 * **多 Agent 自動化工作流協同架構**:
   * **A (流程控制角色 - Codex)**: 負責拆解總體目標、呼叫 `herdr agent wait` 進行非同步等待與多 Agent 調度。
@@ -279,7 +279,7 @@
 
 ---
 
-### 38. [discernment-nudge](https://github.com/anthropics/anthropic-agent-skills)
+### 38. [discernment-nudge](https://github.com/anthropics/skills)
 * **開發團隊**: Anthropic 官方
 * **安裝指令**: `/plugin marketplace add anthropics/skills` 後執行 `/plugin install discernment-nudge@anthropic-agent-skills`
 * **功能簡介**: Anthropic 官方 Agent Skills 庫上架的「反思與質疑引導」Skill。當 AI 回答完畢後，會主動在文末附帶 2~3 條針對潛在漏洞、邏輯脆弱處或假設邊界的反問句，方便開發者直接挑選回貼，要求 AI 自我交叉驗證與挑錯，有效防止 AI 幻覺或過度自信。
@@ -301,6 +301,71 @@
 * **專案團隊**: Vostride
 * **功能簡介**: 以自然語言定義並執行 Web 與行動應用程式的迴歸 QA 工作流，提供 CLI 與 MCP 介面，保留螢幕截圖、DOM、網路及主控台證據，並協助失敗分類。
 * **授權與費用**: 目前版本採 FSL-1.1-ALv2 原始碼可用授權；每個版本發布兩年後轉為 Apache-2.0。套件可免費使用，但所設定的模型供應商可能另行收費。
+
+---
+
+### 41. [DeerFlow](https://github.com/bytedance/deer-flow)
+* **開發團隊**: 字節跳動 (ByteDance) / BytePlus
+* **功能簡介**: 字節跳動開源的超級智慧體運行框架 (SuperAgent Harness)，專為長時間、複雜的多步驟自主任務（如深度研究、代碼編寫、看板生成與複雜報告產出）量身打造。採用 Docker 隔離沙箱環境提供真實的終端機與檔案系統執行能力，內建長期記憶庫、子代理編排 (Sub-Agent Orchestration) 與模組化技能系統，相容任何具備 OpenAI 介面相容之大語言模型。
+* **授權**: MIT 開源授權
+
+---
+
+### 42. [WebMCP](https://github.com/ChromeDevTools/devtools-frontend)
+* **功能簡介**: 網頁端 AI Agent 互動協議新標準 (Web Model Context Protocol)。解決傳統 Agent 僅能依賴 DOM 爬蟲或截圖猜測操作網頁的痛點，允許網頁前端開發者透過聲明式 API (Declarative HTML Form) 或命令式 API (JavaScript `registerTool()`)，直接向 AI Agent (如 Claude + Chrome DevTools MCP) 暴露標準化結構工具。使同一個網站能同時具備給人類操作的 UI 與給 Agent 直連呼叫的 Tool 介面。
+
+---
+
+### 43. [BitFun](https://github.com/GCWing/BitFun)
+* **開發團隊**: GCWing
+* **功能簡介**: 基於 Rust 核心與 Tauri v2 打造的開源跨平台桌面 AI Agent 應用 (支援 Windows、macOS 與 Linux)。顛覆純文字對話框限制，當收到任務時能自動為任務生成專屬且具狀態的可操作介面（Mini Apps，如互動圖表、看板、表單與控制面板）。具備 ~98.67% 的極高 KV Cache 命中率與 flashgrep 極速搜尋，支援零知識加密自架中繼伺服器同步與四層深度自訂（Agent、MCP/Skills/Hooks、Mini Apps 至源碼級修改）。
+
+---
+
+### 44. [Archify](https://github.com/tt-a1i/archify)
+* **作者 / 團隊**: tt-a1i
+* **安裝指令**: `npx skills add tt-a1i/archify -g`
+* **功能簡介**: 專為 AI Coding Agent（Claude Code、Cursor、Codex 等）打造的架構視覺化與 Diagrams-as-Code 技能。以數據化 IR (Intermediate Representation) 嚴格校驗架構邏輯，用自然語言即可將專案程式碼結構編譯為美觀、具動態效果、支援深淺色主題切換的獨立互動式 HTML 架構圖、流程圖與序列圖，並支援架構變更對比 (Before/Delta/After Diff) 與高解析度匯出，為傳統 Mermaid 的現代化升級方案。
+
+---
+
+### 45. [Graft](https://github.com/trailhq/Graft)
+* **開發團隊**: Trail
+* **功能簡介**: 專為 Claude Code 等 Coding Agent 設計的專案脈絡與代碼庫知識地圖層。透過在本地建構持久化的代碼關聯圖譜，讓 Agent 在每次開啟對話時無需重複全盤掃描與重讀專案檔案，大幅降低 Token 消耗達 99% 並提升 3 倍執行速度，使 AI 能夠精準導航於超大型程式庫。
+
+---
+
+### 46. [Orca](https://github.com/stablyai/orca)
+* **開發團隊**: Stably AI
+* **功能簡介**: 開源的 AI 代理開發環境 (ADE, Agent Development Environment)，專門用於平行管理與調度多個 Coding Agent 艦隊。支援將研究、後端開發、測試撰寫等不同子任務平行分發給多個獨立運行的 Agent，並在統一的儀表板中跨桌面、行動裝置與 VPS 即時監控所有 Agent 的任務執行進度。
+
+---
+
+### 47. [RTK (Rust Token Killer)](https://github.com/rtk-ai/rtk)
+* **開發團隊**: rtk-ai
+* **安裝指令**: `brew install rtk` 或 `cargo install rtk`
+* **功能簡介**: 高效能 Rust 本地 CLI 代理工具，專門攔截並壓縮終端機命令輸出（支援 Git、npm、cargo、pytest、docker、kubectl 等 100+ 種常見開發指令）。透過智慧過濾、分組收納與日誌去重，最高可裁減 60%~90% 的 Bash 終端輸出 Token，有效降低 AI Coding Agent 的上下文讀取負擔與 API 費用。
+
+---
+
+### 48. [CodeGraph](https://github.com/colbymchenry/codegraph)
+* **作者**: Colby McHenry (@colbymchenry)
+* **安裝與設定**: `npx @colbymchenry/codegraph`（或執行 `codegraph install` 註冊 MCP）
+* **授權條款**: MIT License
+* **功能簡介**: 專為 AI Coding Agent 打造的本地代碼知識圖譜（Surgical Context）。傳統 Agent 依賴反覆 grep、glob 與 read 逐檔探勘架構，浪費大量 Context 與 API 調用次數；CodeGraph 將專案解析為本地 SQLite 知識圖譜，包含所有符號、函數呼叫關係與相依性網絡。Agent 僅需單次精準查詢即可掌握特定函式全貌與變更影響範圍（Blast Radius），隨專案規模成長其 Token 節省效益呈指數級提升。
+
+---
+
+### 49. [Claudex Loop](https://github.com/chaseai-yt/claudex-loop)
+* **作者 / 團隊**: Chase AI (@chaseai-yt)
+* **安裝指令**: `npx skills add chaseai-yt/claudex-loop`
+* **功能簡介**: 專為 Claude Code 與 Codex CLI 開發的雙模型對抗審查擴充（Loop Engineering Skill）。解決傳統 AI 編程中「單一模型自己批改自己作業」的盲點，採用對抗審查機制：由主模型負責草擬計畫與程式碼，另一個獨立 Frontier 模型（如 Codex）站在反方立場挑錯與交叉辯論。涵蓋四階段 Plan Hardening 工作流（Recon 探勘、Requirements 需求對齊、Plan Review 互審修正、Build & Inspect 構建檢測），在終端機內自主迭代直到完全通過機器測試門檻（Test Gates）為止，實現高可靠度且無需人類反覆干預的自主編程。
+
+---
+
+### 50. [Munder Difflin](https://github.com/chaitanyagiri/munder-difflin)
+* **作者**: Chaitanya Giri (@chaitanyagiri)
+* **功能簡介**: 本地運行的 Multi-Agent 視覺化調度 Harness（社群暱稱為「AI 人生辦公室」）。將 Claude Code、Codex CLI、Gemini、OpenCode 或本機 Ollama 等多元 CLI Agent 化身為坐於辦公桌前打電腦的虛擬員工，由總協調器（Chief of Staff / Michael）負責解析任務目標、拆解工項、分派合適 Agent 執行並追蹤進度。採用 Local-first 純文字 Git 狀態同步機制與 Markdown 語意記憶層，無需手動切換與管理多個終端機視窗，打造具備遊戲化視覺又兼顧本機隱私的多代理協作環境。
 
 ---
 
@@ -373,7 +438,7 @@
 
 ---
 
-### 2. [Camofox](https://github.com/Camoufox/camoufox)
+### 2. [Camofox](https://github.com/daijro/camoufox)
 * **功能簡介**: 基於 Firefox 核心改造的開源匿蹤防爬瀏覽器。專門針對反爬蟲偵測機制（如 Cloudflare Turnstile、Akamai 等）進行硬體指紋偽裝與行為模擬，可大幅降低自動化爬蟲被阻擋的機率。
 
 ---
@@ -385,7 +450,7 @@
 
 ---
 
-### 2. [NetCheckMonitor](https://github.com/ahui3c/NetCheckMonitor)
+### 2. [NetCheckMonitor](https://ahui3c.com/159828/netcheckmonitor)
 * **作者**: 3C 達人 廖阿輝 (ahui3c)
 * **功能簡介**: 網路連線狀態即時監控小工具。專門用於家中或公司網路不穩定時自動監控連線並記錄斷線日誌，方便後續向電信業者報修。支援即時產出 PDF 統計報表與 CSV 明細，並具備每日自動上傳備份至 Google Drive 的功能。
 
@@ -434,6 +499,14 @@
 
 ---
 
+### 11. [just-a-launcher](https://github.com/hungmi/just-a-launcher)
+* **作者**: hungmi (gn01189425)
+* **功能簡介**: 專為 Android TV / Google TV 投影機與電視設計的超極簡 Launcher 桌面。徹底解決內建 Google TV 系統因廣告輪播與聚焦動畫導致 CPU 常駐飆破 80%+、RAM 吃緊及劇烈卡頓的痛點；去除所有動態效果、推薦列與常駐服務，將 CPU 佔用壓至近 0%、常駐 RAM 僅約 35MB。讓 2GB 記憶體設備也能秒切 Netflix、YouTube 與巴哈姆特動畫瘋不被系統殺掉後台，並提供一鍵 ADB 腳本與 Agent 自動安裝支援。
+* **安裝方式**: 透過 ADB 腳本一鍵安裝 `curl -LO https://github.com/hungmi/just-a-launcher/releases/latest/download/install.sh && bash install.sh`，或至 Releases 下載 APK 手動安裝。
+* **授權協議**: MIT License
+
+---
+
 ## 📈 金融、交易與生活助手
 
 ### 1. [Fincept Terminal](https://github.com/Fincept-Corporation/FinceptTerminal)
@@ -447,7 +520,7 @@
 
 ---
 
-### 3. [財伴 oSave](https://apps.apple.com/app/osave)
+### 3. [財伴 oSave](https://www.finctory.com/)
 * **開發團隊**: finctory
 * **功能簡介**: 結合 AI 輔助的存錢與理財記帳助手 App。支援 iOS 與 Android 雙平台，主打精準記帳、資產與財務分析，並提供個性化的儲蓄計畫與投資本金累積建議。
 
@@ -466,12 +539,12 @@
 
 ---
 
-### 2. [StreameX](https://github.com/streamex-app/streamex)
+### 2. [StreameX](https://streamex.ws/)
 * **功能簡介**: 開源的跨平台影視影音串流瀏覽與播放應用。具備現代化 UI 介面，支援搜尋電影、電視影集 (TV Shows)、熱門榜單瀏覽與流暢串流播放體驗。
 
 ---
 
-### 3. [分鏡快拆 (Story Cut) 與 GridyClip](https://zhiyent.com/story)
+### 3. [分鏡快拆 (Story Cut) 與 GridyClip](https://gridyclip.com)
 * **作者**: 異鄉人經紀小葉 (ayeh821) / 嚴曇 (GridyClip)
 * **功能簡介**: 專為影像導演、剪接師與行銷過稿設計的影片分鏡自動拆解工具。只需將影片拖入網頁，即可自動偵測畫面切點完成分鏡拆解，支援時間軸微調、每格鏡頭備註分析，並可一鍵輸出分鏡大圖、Excel、PDF 或打包下載所有高清截圖。影片全程於本機瀏覽器內運算不需上傳伺服器，確保未公開影音素材的商業機密。
 
@@ -489,6 +562,24 @@
 
 ---
 
+### 6. [Remotion](https://github.com/remotion-dev/remotion)
+* **開發團隊**: Remotion
+* **安裝指令**: `npm init video` 或 `npx create-video`
+* **功能簡介**: 以 React 程式碼驅動的現代化影片製作與動畫開發框架。將影片時間軸、動態視覺與畫面場景完全拆解為可高度重用的 React 元件，支援使用 CSS / Canvas / SVG 進行精確到影格 (Frame-by-Frame) 的排版與運鏡。支援透過程式碼動態傳入參數批次渲染大量個人化影片，是將 AI 生成內容與影片自動化流程無縫結合的核心利器。
+
+---
+
+### 7. [OpenMontage](https://github.com/calesthio/OpenMontage)
+* **開發團隊**: Calesthio
+* **功能簡介**: 首個端到端開源的 Agentic 影音製作系統，將 Claude Code、Cursor 等 Coding Agent 直接轉化為具備全流程製作能力的影片工作室。內建 12 種專業製作 Pipeline（包含動畫解說、紀錄短片、電影級預告片與產品廣告）及 50+ 種工具（整合 FFmpeg 與 Remotion），Agent 能自主完成選題研究、腳本撰寫、素材生成、剪輯組合到最終渲染。
+
+---
+
+### 8. [ChatCut](https://chatcut.io/)
+* **功能簡介**: 自然語言對話驅動的 AI 影片剪輯應用。只需將影片檔案拖入並以口語化指令對話，AI 即能自動分析影音內容完成修除贅詞口誤、精準對齊字幕、添加轉場與動畫特效；更支援將文字研究報告、PDF 或 Excel 數據一鍵自動生成為流暢的動畫短影音，同時保留多軌時間軸供創作者後續手動細調。
+
+---
+
 ## 🔄 工作流自動化
 
 ### 1. [n8n](https://github.com/n8n-io/n8n)
@@ -498,7 +589,7 @@
 
 ## 📚 AI 學習資源、電子書與認證指南
 
-### 1. [深入理解 AI Agent：設計原理與工程實踐](https://bojieli.github.io/agent-book/)
+### 1. [深入理解 AI Agent：設計原理與工程實踐](https://github.com/bojieli/ai-agent-book)
 * **作者**: 李博傑 (bojieli) 等
 * **功能簡介**: 免費開源的 AI Agent 完整電子書。以「Agent = LLM + 上下文 + 工具」為核心架構，全書共 10 章並附帶 92 個配套實驗（其中 70+ 個可獨立執行）。支援正體中文、簡體中文、英文等 7 種語言，並提供 PDF/EPUB 離線下載與線上閱讀。
 

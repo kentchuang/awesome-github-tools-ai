@@ -15,15 +15,15 @@
 
 ---
 
-## 💡 涵蓋主題分類索引 (收錄 70+ 精選工具)
+## 💡 涵蓋主題分類索引 (收錄 80+ 精選工具)
 
 1. **🤖 AI 輔助與 Agent 相關工具**
-   * **本機 Agent & 辦公視覺化**：Hermes AI Agent、OpenWorker (吳恩達團隊)、AI Office Dollhouse (2.5D 像素辦公室)、OfficeCLI (免裝 Office API 操作)、HermesOffice。
-   * **多 Agent 編排與背景執行**：AWS Kiro Crew (3.9 萬人使用)、herdr (多 Agent 協同閉環)、Agenvoy (台灣自研純 Go 單一 Binary Harness)、Nario AI (直連傳統 ERP)。
-   * **Token 極致節省**：Caveman (山頂洞人輸出壓縮)、Headroom (輸入上下文可逆壓縮)、pxpipe (程式碼轉圖片省 50% Token)。
-   * **開發工程與規格化**：github/spec-kit (規格驅動 SDD)、mattpocock/skills (需求訪談/問卷/TDD)、Claude Code 知識三件套 (Graphify / Firecrawl / Gemini Notebook)、Vibe Coding 必備 5 大外掛。
-   * **程式碼與安全審查**：Trail of Bits 官方安全 Skills、Anthropic Claude Code Security Review、阿里 open-code-review、OpenAI codex-plugin-cc、reverse-skill 白帽滲透測試、SkillSpector (NVIDIA 技能安全掃描器)、Agent QA (自然語言 Web/Mobile 迴歸測試與 MCP)。
-   * **多模態與瀏覽器 Agent**：Webwright (微軟瀏覽器自動化)、Index (Laminar 瀏覽器 Agent)、Ego-lite (人機協同瀏覽器)、Chrome DevTools MCP (Google 官方開發者工具 MCP)、Multi-AI-Chat-Desktop、linebot-multimodal-rag、rag-anything MCP、說人話 speak-human-tw、cangjie-skill。
+   * **本機 Agent & 桌面操作**：DeerFlow (字節跳動超級智慧體運行框架)、BitFun (桌面 Mini Apps 智慧體)、Hermes AI Agent、OpenWorker (吳恩達團隊)、Munder Difflin (AI 人生辦公室多 Agent 視覺化調度)、AI Office Dollhouse (2.5D 像素辦公室)、OfficeCLI (免裝 Office API 操作)、HermesOffice。
+   * **多 Agent 編排與背景執行**：Orca (Agent 開發環境與艦隊平行管理)、AWS Kiro Crew (3.9 萬人使用)、herdr (多 Agent 協同閉環)、Agenvoy (台灣自研純 Go 單一 Binary Harness)、Nario AI (直連傳統 ERP)。
+   * **Token 極致節省與脈絡地圖**：RTK (Rust Token Killer，終端輸出壓縮 90%)、CodeGraph (本地代碼知識圖譜與精準脈絡)、Graft (Claude Code 專案知識圖譜與導航)、Caveman (山頂洞人輸出壓縮)、Headroom (輸入上下文可逆壓縮)、pxpipe (程式碼轉圖片省 50% Token)。
+   * **開發工程與視覺化**：Archify (AI 架構圖生成與 Diagrams-as-Code)、github/spec-kit (規格驅動 SDD)、mattpocock/skills (需求訪談/問卷/TDD)、Claude Code 知識三件套 (Graphify / Firecrawl / Gemini Notebook)、Vibe Coding 必備 5 大外掛。
+   * **程式碼與安全審查**：Claudex Loop (雙模型對抗審查與自主循環)、Trail of Bits 官方安全 Skills、Anthropic Claude Code Security Review、阿里 open-code-review、OpenAI codex-plugin-cc、reverse-skill 白帽滲透測試、SkillSpector (NVIDIA 技能安全掃描器)、Agent QA (自然語言 Web/Mobile 迴歸測試與 MCP)。
+   * **Web 標準與瀏覽器 Agent**：WebMCP (網頁端 AI Agent 互動標準)、Chrome DevTools MCP (Google 官方開發者工具 MCP)、Webwright (微軟瀏覽器自動化)、Index (Laminar 瀏覽器 Agent)、Ego-lite (人機協同瀏覽器)、Multi-AI-Chat-Desktop、linebot-multimodal-rag、rag-anything MCP、說人話 speak-human-tw、cangjie-skill。
 
 2. **💻 大語言模型與本地部署**
    * ds4 (antirez 打造，在 Mac 上跑 DeepSeek V4 284b MoE)、天工 AI (Skywork.ai)。
@@ -35,13 +35,13 @@
    * Crawl4AI (LLM 專用非同步爬蟲)、Camofox (Firefox 匿蹤防爬瀏覽器)。
 
 5. **⚡ 實用與效能優化工具**
-   * Winhance (Win11 瘦身優化)、NetCheckMonitor (阿輝 3C 網路連線監控)、DesktopOK (桌面圖示佈局備份)、Career-Ops (AI 反向篩選職缺與 ATS 履歷)、openings-mcp (萬家科技企業職缺搜尋)、AI Quota Deck (多 AI 額度工作列監控)、Public APIs (1000+ 免費 API 寶庫)、remove-ai-watermarks (去除 C2PA/SynthID 浮水印)、jt-gelflow (流量桑基圖視覺化)、IPTV 全球電視。
+   * Winhance (Win11 瘦身優化)、NetCheckMonitor (阿輝 3C 網路連線監控)、DesktopOK (桌面圖示佈局備份)、Career-Ops (AI 反向篩選職缺與 ATS 履歷)、openings-mcp (萬家科技企業職缺搜尋)、AI Quota Deck (多 AI 額度工作列監控)、Public APIs (1000+ 免費 API 寶庫)、just-a-launcher (Google TV 超極簡桌面，CPU 降至近 0%、常駐 RAM 僅 35MB 拯救卡頓電視)、remove-ai-watermarks (去除 C2PA/SynthID 浮水印)、jt-gelflow (流量桑基圖視覺化)、IPTV 全球電視。
 
 6. **📈 金融、交易與生活助手**
    * Fincept Terminal (開源彭博終端)、Vibe-Trading (交易 Agent 與影子帳戶)、財伴 oSave (AI 記帳助手)、HealthWorkbench (個人與家庭健康存摺工作台)。
 
 7. **🎬 影音與串流工具**
-   * Invidious (無廣告隱私 YouTube 前端)、StreameX (開源跨平台串流)、分鏡快拆 (Story Cut / GridyClip 影片自動拆分鏡)、video-autopilot-kit (CapCut JSON + ffmpeg 自動剪片)、JojoNowhere AI Edit Kit (Claude 剪片工作流資源包)。
+   * Invidious (無廣告隱私 YouTube 前端)、StreameX (開源跨平台串流)、Remotion (React 程式化影片開發框架)、OpenMontage (端到端 Agent 影音製作工作室)、ChatCut (對話式 AI 影片剪輯)、分鏡快拆 (Story Cut / GridyClip 影片自動拆分鏡)、video-autopilot-kit (CapCut JSON + ffmpeg 自動剪片)、JojoNowhere AI Edit Kit (Claude 剪片工作流資源包)。
 
 8. **🔄 工作流自動化**
    * n8n (開源節點式自動化與 AI Agent 串接)。
