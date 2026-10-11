@@ -369,6 +369,131 @@
 
 ---
 
+### 51. [AI Website Cloner Template](https://github.com/JCodesMore/ai-website-cloner-template)
+* **作者 / 團隊**: JCodesMore
+* **授權條款**: MIT License
+* **使用方式**:
+  * Clone 專案：`git clone https://github.com/JCodesMore/ai-website-cloner-template.git`
+  * 安裝依賴：`npm install`
+  * 配合 Claude Code 執行指令：`/clone-website <target-url>`
+* **功能簡介**: 專為 AI Coding Agent 打造的網站逆向工程與克隆模板。只需給予目標網站 URL，即可讓 AI Agent（深度適配 Claude Code + Opus 5，亦支援 Cursor、Codex、OpenCode 等）將任意現有網站重建成架構乾淨、高可維護性的現代 Next.js 應用程式。不同於傳統簡單的靜態 HTML/DOM 抓取，本專案採用完整的工程重構流：包含多模態視覺勘測（截圖比對、響應式斷點與設計令牌分析）、資源萃取，並以 React 19、TypeScript、Tailwind CSS (v4) 與 shadcn/ui 自動編寫元件規格與現代代碼，大幅加速原型開發與前端重構效率。
+
+---
+
+### 52. [desktop-sense](https://github.com/angletech2026-arch/desktop-sense)
+* **作者**: angletech2026-arch
+* **授權條款**: MIT License
+* **功能簡介**: 開源本機端背景常駐程式 (Local Daemon)，專為終端機 AI 程式開發助理（Claude Code、Codex CLI、Gemini CLI）打造，旨在讓 AI 助手能「直接看懂你當前螢幕在做什麼」，免除手動截圖與複製終端錯誤日誌的繁瑣流程。
+  * **Prompt 自動附加螢幕上下文 (Live Screen Context)**: 透過命令列工具 Hook 機制（如 Claude Code 的 UserPromptSubmit），在每次發送 Prompt 時自動附帶：當前視窗與應用程式、最近 20 分鐘操作軌跡時間線、可見錯誤訊息及本機最新截圖路徑。
+  * **智慧增量傳輸 (極致節省 Token)**: 同輪對話中僅傳送畫面差異變化，首則訊息約耗費數百至 1,500 tokens，後續追問通常低於 200 tokens。
+  * **主動式錯誤雷達 (Error Radar)**: 背景即時監測終端機或編輯器中出現的報錯語句（Python Traceback、npm ERR!、error TS...、編譯失敗或重複執行的指令），背景調用輕量模型分析並透過系統桌面通知彈出修復建議。
+  * **重複錯誤自動聯網調查 (Auto-research)**: 連續兩次出現相同報錯時，自動前往 GitHub Issues、Stack Overflow、Reddit 等社群抓取類似災情與最佳解法；著手新專案時亦會自動檢索既有開源專案防重複造輪子。
+  * **本機隱私與安全機制**: 記錄與文字辨識均在用戶本機執行；具備預設隱私保護（密碼管理器、網銀、無痕視窗預設不記錄），一旦偵測到 API Key 等金鑰截圖也會自動丟棄。
+  * **「看著我」串流與控制台支援**: 提供 `ds stream` 即時串流模式配合 Monitor 工具，並提供 `ds` CLI 指令與 `/desk` Skill，隨時按需檢視本機 OCR 辨識文字、畫面截圖與活動歷史。
+
+---
+
+### 53. [browser-use](https://github.com/browser-use/browser-use)
+* **開發團隊**: browser-use
+* **社群熱度**: ⭐ 30k+ Stars
+* **功能簡介**: 開源社群人氣最高、生態最活躍的瀏覽器 AI Agent 框架。
+  * **原生 MCP 支援**: 內建 MCP Server，終端 AI 助手無需安裝常駐程式，只需在 Claude / Cursor / Codex 設定中加上 MCP 指令（如 `uvx browser-use`），終端 AI 即可直接獲取標準瀏覽器操作工具（`browser_navigate`、`browser_click`、`browser_screenshot`、`browser_extract_content`）。
+  * **精準聚焦與隱私保護**: 截圖操作僅針對網頁視窗本身，完全不會拍到本機桌面的敏感檔案或雜訊，特別適合網頁除錯與瀏覽器工作流自動化。
+
+---
+
+### 54. [Playwright MCP](https://github.com/executeautomation/mcp-playwright)
+* **開發團隊**: 微軟 Playwright 標準生態 / ExecuteAutomation
+* **功能簡介**: 由微軟官方 Playwright 測試框架延伸的標準 MCP 伺服器生態，專為端到端 (E2E) 自動化測試設計。
+  * **工業級測試穩定度**: 具備微軟官方 Playwright 的高度穩定度與跨瀏覽器原生控制力。
+  * **深度 Console 與 Network API 攔截**: 能直接監聽瀏覽器主控台日誌 (Console Logs) 與後端網路請求 (Network API，包含 400/500 錯誤與 Payload)。當送出訂單失敗或介面異常時，AI 能直接看到精確的後端回傳錯誤代碼，完全不需要看螢幕截圖猜測。
+
+---
+
+### 55. [Midscene.js](https://github.com/web-infra-dev/midscene)
+* **開發團隊**: 字節跳動 (ByteDance / web-infra-dev)
+* **社群熱度**: ⭐ 7k+ Stars
+* **功能簡介**: 字節跳動開源、專為 UI 測試打造的多模態 AI 自動化測試與視覺檢驗工具。
+  * **自然語言撰寫測試**: 支援直接以自然語言撰寫測試腳本（如「點擊開團按鈕」、「檢查購物車商品數量是否為 1」）。
+  * **完整視覺對照報告**: 測試執行完成後自動產生完整的視覺化對照報告與檢驗截圖，極度適合在 Next.js / 前端專案建立長期穩定的自動化 UI 驗證工作流。
+
+---
+
+### 56. [Screenpipe](https://github.com/mediar-ai/screenpipe)
+* **開發團隊**: mediar-ai
+* **社群熱度**: ⭐ 14k+ Stars
+* **功能簡介**: 目前開源界最成熟、評價最高的桌面級 AI 記憶與全螢幕感知核心。
+  * **Rust 高效能核心**: 採用 Rust 打造，記憶體與 CPU 佔用極低，即使 24/7 背景常駐也不卡頓。
+  * **標準介面支援**: 原生提供 REST API 與 MCP Server，跨平台支援 Windows 與 macOS。
+  * **全桌面感知與本地 SQLite 索引**: 支援跨應用程式（同時涵蓋 VS Code、終端機、瀏覽器、資料庫 GUI 等）記錄整個螢幕畫面與 OCR 文字，並結構化索引至本地 SQLite，AI 助手可直接透過自然語言查詢「幫我找 10 分鐘前終端機出現的錯誤訊息」。
+
+---
+
+### 57. [M3E Canvas](https://github.com/lnkiai/m3e-canvas)
+* **開發團隊**: lnkiai
+* **社群熱度**: ⭐ 7k+ Stars (兩週內破 7,000 星標)
+* **授權條款**: MIT License
+* **功能簡介**: 專為 Material 3 Expressive (M3E) 設計的開源純前端視覺化 UI 畫布。
+  * **解決自然語言排版歧義**: 開發者可透過直觀的拖曳操作將按鈕、卡片、導航列等元件排列於畫布上，視覺化規劃空間層級與元件群組。
+  * **一鍵產出結構化 Prompt**: 畫布可將排版配置自動編譯為高度結構化的自然語言 Prompt，直接貼入 Claude Code、Cursor、Gemini CLI 等 Coding Agent 即可精準產出語意正確的前端代碼。
+  * **零後端純本機架構**: 採 Zero-backend 純前端技術打造，所有資料透過 LocalStorage 儲存於本機端，無伺服器中繼且免登入帳號。
+
+---
+
+### 58. [Everything Claude Code (ECC)](https://github.com/affaan-m/ECC)
+* **作者**: Affaan Mustafa (@affaan-m)
+* **授權條款**: MIT License
+* **功能簡介**: 社群公認最完整、歷時 10 個月精心打造的 Claude Code 生產力設定全集。
+  * **模組化工程架構**: 內建完整的專用代理配置 (Agents)、工程級技能庫 (Skills) 與 MCP 伺服器配置範本 (MCP Configs)。
+  * **開箱即用頂級環境**: 徹底解決開發者手動調校與設定摸索的繁瑣痛點，一鍵即可將 Claude Code 升級為具備全端開發、架構規劃、代碼審核與自動化測試能力的終端機結對工程師。
+
+---
+
+### 59. [Hindsight](https://github.com/vectorize-io/hindsight)
+* **開發團隊**: Vectorize (vectorize-io)
+* **社群熱度**: ⭐ 38k+ Stars，GitHub Trending TOP 2
+* **授權條款**: MIT License
+* **功能簡介**: 專為 AI Agent 打造的「自我進化」長期記憶系統 (Agent Memory That Learns)。
+  * **終結重複交代背景**: 基於 Python 打造，徹底解決 AI 助手「每次開啟新對話都要重頭交代背景」的記憶遺忘痛點。
+  * **自動化知識提煉**: 在後台自動從 Agent 與使用者的對話歷程、程式碼修改反思與執行回饋中持續提取關鍵知識、偏好與架構決策，使 AI Agent 隨著使用時間不斷進化，越用越聰明。
+
+---
+
+### 60. [Paperclip](https://github.com/paperclipai/paperclip)
+* **開發團隊**: Paperclip AI (paperclipai)
+* **社群熱度**: ⭐ 87k+ Stars，TypeScript 打造，GitHub 熱門榜 #1
+* **授權條款**: MIT License
+* **功能簡介**: 專為管理工作場所中 AI 員工團隊設計的開源 Multi-Agent 控制平面 (Control Plane)。
+  * **統一代理組織治理**: 能將不同 runtime、不同框架的 AI Agent 納入統一的組織、任務分派與治理架構中。
+  * **六大企業級控制維度**: 提供目標拆解 (Goal)、組織架構圖 (Org Chart)、健康心跳監測 (Heartbeat)、算力與 Token 預算控制、關鍵步驟人工審批 (Approval) 以及完整稽核日誌 (Audit Log)，將零散脆弱的單次 AI Session 昇華為具備可觀測性、可恢復性與安全邊界的高可靠企業級自動化團隊。
+
+---
+
+### 61. [mobile-mcp](https://github.com/mobile-next/mobile-mcp)
+* **開發團隊**: mobile-next
+* **社群熱度**: ⭐ 8.6k+ Stars
+* **授權條款**: Apache-2.0 License
+* **功能簡介**: 讓 AI Coding Agent（Claude Code、Codex、Gemini CLI）能直接操控 iOS 與 Android 應用程式的開源 MCP 伺服器。
+  * **原生無障礙樹定位**: 打破傳統依靠截圖與視覺猜測點擊的耗能模式，直接讀取系統原生無障礙樹 (Accessibility Tree) 獲取精確元件座標，速度極快且大幅節省 Context Token。
+  * **全功能自動化操控**: 支援點擊、手勢滑動、鍵盤輸入、安裝 App、即時截圖與錄影，同時相容實體行動裝置與模擬器，開發者無需深入鑽研 XCUITest 或 Espresso，即可讓 AI Agent 自動完成行動端 E2E 測試、自動填表與 App 流程驗證。
+
+---
+
+### 62. [YYLO](https://github.com/yylo-dev/yylo)
+* **專案團隊**: yylo-dev
+* **授權條款**: MIT License (開源免費)
+* **安裝指令**: `npm install --global @yylo/cli@latest`（提供 `yylo` 與 `yy` 命令，或 `ypl` 即時終端代理會話）
+* **功能簡介**: 命令列多 AI 編碼代理協調器（CLI Orchestrator for Coding Agents），專為可重複執行的 Agent 工作流程與附帶審計回執（Receipts）的程式庫變更而設計。
+  * **Git Worktree 實體環境隔離**: 執行 `task start` 時鎖定受保護的目標 Commit SHA，並為每個 AI 任務自動建立專屬的獨立分支與 `git worktree` 沙箱。徹底根絕多個 Agent 同時修改專案時造成的同檔案異動覆蓋、程式碼競態衝突與 Git `index.lock` 鎖死問題。
+  * **型別化驗證與釋出閘門 (Validation & Merge Gates)**: 定義嚴謹的任務生命週期（Task ➔ Validation ➔ Merge ➔ Release-readiness），強制 Agent 編寫的代碼必須在獨立沙箱通過客觀測試驗證後才允許合入主分支。
+  * **變更回執與證據鏈 (Receipt-backed Changes)**: 每次變更皆附帶不可竄改的數位回執（Receipts），完整留存修改動機、執行摘要與審計證據。
+  * **Git-Native 純文字看板 (YYLO Ledger)**: 任務看板狀態直接以版本化 Markdown 檔案維護於 Git 倉庫內部，免除外部專案管理 SaaS 依賴。
+  * **與 herdr 等多 Agent 工具的協同增效**:
+    * **分工互補**: `herdr` 負責進程與背景生命週期（守護背景持續運行、電腦休眠不中斷、`herdr agent wait` 非同步等待調度）；`YYLO` 負責檔案系統與狀態隔離（worktree 沙箱、Validation 驗證閘門與 Receipt 回執）。
+    * **極致防撞車**: 完美解決在單機背景常駐運行多 Agent（例如前端與後端 Agent 同時作業）時最致命的「骯髒工作目錄 (Dirty Working Tree)」與「同檔案異動污染」痛點。
+
+---
+
 ## 💻 大語言模型與本地部署
 
 ### 1. [ds4 (Dwarf Star 4)](https://github.com/antirez/ds4)
@@ -428,6 +553,16 @@
 ### 8. [Microsoft Presidio](https://github.com/microsoft/presidio)
 * **開發團隊**: 微軟 (Microsoft)
 * **功能簡介**: 微軟開源的敏感個人資料 (PII) 自動識別與去識別化防禦引擎。結合 NLP/NER 實體辨識模型與正規表示式雙引擎，精準辨識上下文中的真實姓名、地址、電話、身分證與信用卡等個資；支援字元遮罩 (Masking)、雜湊加密 (Hashing)、假資料替換 (Redact) 及部分保留等多種脫敏策略。提供 Python SDK、REST API 與 Docker 容器，是構建 LLM / RAG 資料前置清洗防線的標準利器。
+
+---
+
+### 9. [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)
+* **開發團隊**: 百度飛槳 (PaddlePaddle)
+* **社群熱度**: ⭐ 90k+ Stars
+* **授權條款**: Apache-2.0 License
+* **功能簡介**: 工業級開源多模態光學字元辨識 (OCR) 工具包，專門用於將複雜 PDF 文件、掃描報告與各式圖片轉化為大語言模型 (LLM) 易於讀取的結構化 JSON 與 Markdown 格式。
+  * **輕量級端到端模型**: 內建輕量級 PaddleOCR-VL-1.6 (0.9B) 視覺語言模型與 PP-OCRv6，兼具高辨識率與極速推論。
+  * **50+ 種跨語言支援**: 原生支援繁中、簡中、英、日以及 46 種拉丁語系語言（總計 50 種語言），在處理跨國、多語系文件時完全不需頻繁切換模型，精準萃取文字內容、表格結構與排版資訊。
 
 ---
 
@@ -507,6 +642,16 @@
 
 ---
 
+### 12. [Tusk](https://github.com/alpcanaydin/tusk)
+* **作者**: Alpcan Aydın (@alpcanaydin)
+* **授權條款**: MIT License
+* **功能簡介**: 專為 macOS 打造的高效能原生鍵盤驅動資料庫客戶端。
+  * **支援 20+ 種資料庫**: 支援連接 PostgreSQL、MySQL、SQLite、Redis、MongoDB 等 20 種常見資料庫。
+  * **內建安全 AI 助手**: 搭載本機 AI 查詢助手，僅協助起草 SQL 查詢語句，絕不擅自執行任何操作，完全由使用者掌控確認。
+  * **極致隱私保護**: 全程本機運作、無須註冊帳號、絕不回傳連線密鑰或資料庫內容，完全免費且開源，終結商業工具高昂的訂閱費用。
+
+---
+
 ## 📈 金融、交易與生活助手
 
 ### 1. [Fincept Terminal](https://github.com/Fincept-Corporation/FinceptTerminal)
@@ -529,6 +674,14 @@
 ### 4. [HealthWorkbench](https://github.com/notoriouslab/health-workbench)
 * **開發團隊**: NotoriousLab
 * **功能簡介**: 免費開源的個人與家庭健康資料工作台桌面 App (支援 macOS 與 Windows)。解決健保「健康存摺」僅保留近三年紀錄以及 Apple 健康匯出檔龐大難讀的痛點；支援直接拖入健保存摺下載檔、Apple 健康匯出檔與睡眠呼吸器 SD 卡資料，自動解析格式、去除重複並建立跨越三年的完整終身健康紀錄。提供就醫時間軸、用藥清單（附成分與仿單連結）、檢驗趨勢圖與呼吸器 AHI 整合圖表。全程本機運作不上雲、無帳號、無追蹤，並支援一鍵匯出單檔 HTML 或 EPUB 方便回診時與醫師討論。
+
+---
+
+### 5. [Capafy (Alpha Consensus)](https://capafy.ai/)
+* **開發團隊**: Capafy AI
+* **功能簡介**: 結合 AI Skills 市場機制的金融市場洞察與交易情報平台。
+  * **Alpha Consensus 核心技能**: 專門追蹤與聚合 X (Twitter) 等社群網路上頂尖交易員、機構與分析師的投資言論、消息發布與資金流向。
+  * **多空共識看板 (Consensus Dashboard)**: 自動產生「市場共識看板」（如 DJT Radar），將散亂的股票討論結構化標記為看多或看空理由，並深度交叉比對消息發布前後的股價走勢，協助投資者洞察市場主線與機構資金預期。
 
 ---
 
