@@ -29,9 +29,9 @@
 
 ---
 
-### 3. [Webwright](https://github.com/microsoft/Webwright)
+### 3. [CUAWright (原 Webwright)](https://github.com/microsoft/CUAWright)
 * **開發團隊**: 微軟 (Microsoft)
-* **功能簡介**: 擁有「終端機控制權」的瀏覽器自動化框架。不同於傳統 Playwright 無腦將網頁原始碼塞滿 Context Window，Webwright 會讓 Agent 在本機端產生並迭代一個可重複執行的 Python 腳本，透過無頭瀏覽器截圖自我驗證抓取資料的正確性。
+* **功能簡介**: 微軟開源具備「終端機控制權」的瀏覽器與桌面自動化 Agent 框架（原專案名為 Webwright）。不同於傳統 Playwright 無腦將網頁原始碼塞滿 Context Window，CUAWright 會讓 Agent 在本機端產生並迭代一個可重複執行的 Python 腳本，透過無頭瀏覽器截圖自我驗證抓取資料的正確性。
 
 ---
 
@@ -316,7 +316,7 @@
 
 ---
 
-### 43. [BitFun](https://github.com/GCWing/BitFun)
+### 43. [OpenBitFun (原 BitFun)](https://github.com/GCWing/OpenBitFun)
 * **開發團隊**: GCWing
 * **功能簡介**: 基於 Rust 核心與 Tauri v2 打造的開源跨平台桌面 AI Agent 應用 (支援 Windows、macOS 與 Linux)。顛覆純文字對話框限制，當收到任務時能自動為任務生成專屬且具狀態的可操作介面（Mini Apps，如互動圖表、看板、表單與控制面板）。具備 ~98.67% 的極高 KV Cache 命中率與 flashgrep 極速搜尋，支援零知識加密自架中繼伺服器同步與四層深度自訂（Agent、MCP/Skills/Hooks、Mini Apps 至源碼級修改）。
 
@@ -343,6 +343,7 @@
 
 ### 47. [RTK (Rust Token Killer)](https://github.com/rtk-ai/rtk)
 * **開發團隊**: rtk-ai
+* **社群熱度**: ⭐ 82k+ Stars
 * **安裝指令**: `brew install rtk` 或 `cargo install rtk`
 * **功能簡介**: 高效能 Rust 本地 CLI 代理工具，專門攔截並壓縮終端機命令輸出（支援 Git、npm、cargo、pytest、docker、kubectl 等 100+ 種常見開發指令）。透過智慧過濾、分組收納與日誌去重，最高可裁減 60%~90% 的 Bash 終端輸出 Token，有效降低 AI Coding Agent 的上下文讀取負擔與 API 費用。
 
@@ -363,7 +364,7 @@
 
 ---
 
-### 50. [Munder Difflin](https://github.com/chaitanyagiri/munder-difflin)
+### 50. [Munder Difflin](https://github.com/HarnessMD/munder-difflin)
 * **作者**: Chaitanya Giri (@chaitanyagiri)
 * **功能簡介**: 本地運行的 Multi-Agent 視覺化調度 Harness（社群暱稱為「AI 人生辦公室」）。將 Claude Code、Codex CLI、Gemini、OpenCode 或本機 Ollama 等多元 CLI Agent 化身為坐於辦公桌前打電腦的虛擬員工，由總協調器（Chief of Staff / Michael）負責解析任務目標、拆解工項、分派合適 Agent 執行並追蹤進度。採用 Local-first 純文字 Git 狀態同步機制與 Markdown 語意記憶層，無需手動切換與管理多個終端機視窗，打造具備遊戲化視覺又兼顧本機隱私的多代理協作環境。
 
@@ -373,7 +374,7 @@
 * **作者 / 團隊**: JCodesMore
 * **授權條款**: MIT License
 * **使用方式**:
-  * Clone 專案：`git clone https://github.com/JCodesMore/ai-website-cloner-template.git`
+  * Clone 專案：`git clone https://github.com/JCodesMore/ai-website-cloner-template`
   * 安裝依賴：`npm install`
   * 配合 Claude Code 執行指令：`/clone-website <target-url>`
 * **功能簡介**: 專為 AI Coding Agent 打造的網站逆向工程與克隆模板。只需給予目標網站 URL，即可讓 AI Agent（深度適配 Claude Code + Opus 5，亦支援 Cursor、Codex、OpenCode 等）將任意現有網站重建成架構乾淨、高可維護性的現代 Next.js 應用程式。不同於傳統簡單的靜態 HTML/DOM 抓取，本專案採用完整的工程重構流：包含多模態視覺勘測（截圖比對、響應式斷點與設計令牌分析）、資源萃取，並以 React 19、TypeScript、Tailwind CSS (v4) 與 shadcn/ui 自動編寫元件規格與現代代碼，大幅加速原型開發與前端重構效率。
@@ -419,9 +420,9 @@
 
 ---
 
-### 56. [Screenpipe](https://github.com/mediar-ai/screenpipe)
-* **開發團隊**: mediar-ai
-* **社群熱度**: ⭐ 14k+ Stars
+### 56. [Screenpipe](https://github.com/screenpipe/screenpipe)
+* **開發團隊**: mediar-ai / Screenpipe (YC S26)
+* **社群熱度**: ⭐ 21k+ Stars (入選 YC S26)
 * **功能簡介**: 目前開源界最成熟、評價最高的桌面級 AI 記憶與全螢幕感知核心。
   * **Rust 高效能核心**: 採用 Rust 打造，記憶體與 CPU 佔用極低，即使 24/7 背景常駐也不卡頓。
   * **標準介面支援**: 原生提供 REST API 與 MCP Server，跨平台支援 Windows 與 macOS。
@@ -431,7 +432,7 @@
 
 ### 57. [M3E Canvas](https://github.com/lnkiai/m3e-canvas)
 * **開發團隊**: lnkiai
-* **社群熱度**: ⭐ 7k+ Stars (兩週內破 7,000 星標)
+* **社群熱度**: ⭐ 9k+ Stars
 * **授權條款**: MIT License
 * **功能簡介**: 專為 Material 3 Expressive (M3E) 設計的開源純前端視覺化 UI 畫布。
   * **解決自然語言排版歧義**: 開發者可透過直觀的拖曳操作將按鈕、卡片、導航列等元件排列於畫布上，視覺化規劃空間層級與元件群組。
@@ -451,7 +452,7 @@
 
 ### 59. [Hindsight](https://github.com/vectorize-io/hindsight)
 * **開發團隊**: Vectorize (vectorize-io)
-* **社群熱度**: ⭐ 38k+ Stars，GitHub Trending TOP 2
+* **社群熱度**: ⭐ 48k+ Stars，GitHub Trending TOP 2
 * **授權條款**: MIT License
 * **功能簡介**: 專為 AI Agent 打造的「自我進化」長期記憶系統 (Agent Memory That Learns)。
   * **終結重複交代背景**: 基於 Python 打造，徹底解決 AI 助手「每次開啟新對話都要重頭交代背景」的記憶遺忘痛點。
@@ -461,7 +462,7 @@
 
 ### 60. [Paperclip](https://github.com/paperclipai/paperclip)
 * **開發團隊**: Paperclip AI (paperclipai)
-* **社群熱度**: ⭐ 87k+ Stars，TypeScript 打造，GitHub 熱門榜 #1
+* **社群熱度**: ⭐ 100k+ Stars (近 10 萬星標)，TypeScript 打造，GitHub 熱門榜 #1
 * **授權條款**: MIT License
 * **功能簡介**: 專為管理工作場所中 AI 員工團隊設計的開源 Multi-Agent 控制平面 (Control Plane)。
   * **統一代理組織治理**: 能將不同 runtime、不同框架的 AI Agent 納入統一的組織、任務分派與治理架構中。
@@ -515,8 +516,9 @@
 
 ---
 
-### 2. [Docling](https://github.com/DS4SD/docling)
-* **開發團隊**: IBM
+### 2. [Docling](https://github.com/docling-project/docling)
+* **開發團隊**: IBM / docling-project
+* **社群熱度**: ⭐ 68k+ Stars
 * **功能簡介**: 全地端支援 20+ 種檔案格式解析的開源神器。內建專屬的 **TableFormer** 模型，能完美辨識複雜的合併表格與雙排版排版，將其輸出為帶有標題層級與表格標籤的 Markdown 或 JSON，並原生支援 MCP 協議以供 AI Agent 使用，解決傳統解析工具在 RAG 應用中表格亂碼的痛點。
 
 ---
@@ -550,8 +552,8 @@
 
 ---
 
-### 8. [Microsoft Presidio](https://github.com/microsoft/presidio)
-* **開發團隊**: 微軟 (Microsoft)
+### 8. [Microsoft Presidio](https://github.com/data-privacy-stack/presidio)
+* **開發團隊**: 微軟 (Microsoft) / data-privacy-stack
 * **功能簡介**: 微軟開源的敏感個人資料 (PII) 自動識別與去識別化防禦引擎。結合 NLP/NER 實體辨識模型與正規表示式雙引擎，精準辨識上下文中的真實姓名、地址、電話、身分證與信用卡等個資；支援字元遮罩 (Masking)、雜湊加密 (Hashing)、假資料替換 (Redact) 及部分保留等多種脫敏策略。提供 Python SDK、REST API 與 Docker 容器，是構建 LLM / RAG 資料前置清洗防線的標準利器。
 
 ---
@@ -585,7 +587,7 @@
 
 ---
 
-### 2. [NetCheckMonitor](https://ahui3c.com/159828/netcheckmonitor)
+### 2. [NetCheckMonitor](https://ahui3c.com/146346/netcheckmonitor)
 * **作者**: 3C 達人 廖阿輝 (ahui3c)
 * **功能簡介**: 網路連線狀態即時監控小工具。專門用於家中或公司網路不穩定時自動監控連線並記錄斷線日誌，方便後續向電信業者報修。支援即時產出 PDF 統計報表與 CSV 明細，並具備每日自動上傳備份至 Google Drive 的功能。
 
@@ -602,7 +604,8 @@
 
 ---
 
-### 5. [Career-Ops](https://github.com/santifer/career-ops)
+### 5. [Career-Ops](https://github.com/career-ops-hq/career-ops)
+* **社群熱度**: ⭐ 74k+ Stars
 * **功能簡介**: 用 AI 反向篩選職缺的求職神器。能在本地掃描招聘平台並根據用戶自定義的 10 個維度對職缺進行 A-F 精準打分，篩選出高品質工作，並自動生成針對該 Job Description (JD) 優化的專屬 PDF 履歷以通過企業的 ATS 系統篩選。
 
 ---
